@@ -31,7 +31,7 @@ TravelShowcase is a collection of beautifully designed and fully responsive land
 
 ## Live Demo
 
-Check out a live preview of the templates here: [Live Demo Link](#)
+Check out a live preview of the templates here: [Live Demo Link](https://prasad-bhumkar.github.io/TravelShowcase/)
 
 ---
 
