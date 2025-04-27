@@ -1,0 +1,549 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Landmark Highlights: A Dynamic Tour Experience
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes pulseYellow {
+      0%, 100% {
+        color: #d97706;
+        text-shadow: 0 0 8px #fbbf24;
+      }
+      50% {
+        color: #fbbf24;
+        text-shadow: 0 0 20px #fbbf24;
+      }
+    }
+    .pulseYellow {
+      animation: pulseYellow 3s infinite;
+    }
+    /* Hero text flicker */
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+    .flicker {
+      animation: flicker 3s linear infinite;
+    }
+    /* Zoom in on images */
+    .zoomIn {
+      transition: transform 0.5s ease;
+    }
+    .zoomIn:hover {
+      transform: scale(1.05);
+    }
+    /* Button hover glow */
+    .btn-glow {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      filter: blur(8px);
+      z-index: -1;
+      animation: glowing 20s linear infinite;
+    }
+    .btn-glow:hover::before {
+      opacity: 1;
+    }
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 400% 0;
+      }
+    }
+    /* Fade in on scroll */
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="relative w-full h-screen overflow-hidden">
+   <img alt="Panoramic view of famous city landmarks at sunset with skyline and tourists walking" class="w-full h-full object-cover brightness-90" height="1080" loading="eager" src="https://storage.googleapis.com/a1aa/image/fbbde255-fa29-4468-ff7f-04caf2093b9d.jpg" width="1920"/>
+   <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-6 text-center">
+    <h1 class="text-yellow-400 text-5xl sm:text-6xl md:text-7xl font-extrabold max-w-5xl leading-tight drop-shadow-lg flicker">
+     Landmark Highlights:
+     <br/>
+     A Dynamic Tour Experience
+    </h1>
+    <p class="mt-6 text-lg sm:text-2xl max-w-4xl text-yellow-200 drop-shadow-md fadeInUp" style="animation-delay: 0.5s; animation-fill-mode: forwards; animation-duration: 1.2s;">
+     Embark on an unforgettable journey through the city's most iconic landmarks and vibrant cultural hotspots. Dive deep into history, art, and local traditions with our expert guides.
+    </p>
+    <a class="mt-10 inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-extrabold py-4 px-12 rounded-xl shadow-lg transition btn-glow" href="#booking" style="animation-delay: 1s; animation-fill-mode: forwards; animation-duration: 1.2s;">
+     Book Your Tour Now
+    </a>
+   </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 py-20 space-y-32">
+   <!-- Tour Overview Section -->
+   <section class="max-w-4xl mx-auto text-center" id="overview">
+    <h2 class="text-4xl font-bold mb-8 text-yellow-600 pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Experience the City Like Never Before
+    </h2>
+    <p class="text-xl text-gray-700 leading-relaxed scroll-fade" style="transition-delay: 0.3s;">
+     Our immersive guided tours blend captivating stories, hidden gems, and authentic cultural experiences. Whether you're a curious traveler or a local explorer, join us to uncover the soul of the city through its architecture, cuisine, and vibrant communities.
+    </p>
+   </section>
+   <!-- Featured Landmarks -->
+   <section class="max-w-7xl mx-auto" id="landmarks">
+    <h2 class="text-4xl font-bold mb-14 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Featured Landmarks
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.2s;">
+      <img alt="Historic city hall building with classic neoclassical architecture, tall columns, and blue sky" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/19b59dc9-2492-4a0a-eb53-344107ced7d1.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        City Hall
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Established in 1890, City Hall is a stunning example of neoclassical architecture and a symbol of the city's rich political heritage. Its grand clock tower has witnessed over a century of history.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Did you know? The clock tower chimes every hour and was meticulously restored in 2015 to preserve its original charm.
+       </p>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.4s;">
+      <img alt="Golden Arch Bridge spanning a wide river with sunset sky and city skyline" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c0191623-c5e3-4aaf-8734-6e0a8cce3df3.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        Golden Arch Bridge
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Connecting the city’s two vibrant districts, the Golden Arch Bridge is famed for its elegant arches and panoramic views. It’s a favorite spot for photographers and romantics alike.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Fun fact: Over 10,000 LED bulbs illuminate the bridge nightly, creating a mesmerizing light show.
+       </p>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.6s;">
+      <img alt="Ancient gothic cathedral with intricate stained glass windows and stone facade" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e3405912-46da-4da9-a110-59f6f69553cb.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        St. Mary's Cathedral
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        A breathtaking example of gothic architecture, this cathedral has been a spiritual and cultural beacon for over 500 years. Its stained glass windows tell stories of faith and resilience.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Did you know? The cathedral’s bells are rung manually by a dedicated team of bell ringers during special ceremonies.
+       </p>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.8s;">
+      <img alt="Modern art museum with glass facade and outdoor sculpture garden with visitors" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d375d8be-975b-47f0-9352-681376610c91.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        City Art Museum
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Home to a diverse collection of contemporary and classic art, the museum is a vibrant cultural hub. The sculpture garden showcases works from over 20 talented local artists.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Fun fact: The museum hosts monthly artist talks and interactive workshops.
+       </p>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 1s;">
+      <img alt="Historic marketplace with colorful stalls, local crafts, and bustling shoppers" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c12c0783-5f8b-450f-f0d2-6d9e18317088.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        Old Town Market
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        A lively marketplace where tradition meets vibrancy. Sample authentic street food, browse handcrafted goods, and soak in the lively atmosphere that has thrived since the 17th century.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Did you know? The market is a melting pot of cultures, hosting festivals year-round.
+       </p>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 1.2s;">
+      <img alt="City park with fountains, lush trees, and people enjoying outdoor concerts" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/30475565-c8f3-4a01-bcf9-3222aa5576ce.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-3 text-yellow-700">
+        Central Park
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        The city’s green oasis, perfect for relaxing strolls, picnics, and vibrant outdoor concerts. The park hosts over 100 cultural events annually, making it a lively community hub.
+       </p>
+       <p class="mt-5 text-sm text-gray-500 italic">
+        Fun fact: The park’s fountains are choreographed to music during summer evenings.
+       </p>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Itinerary Details -->
+   <section class="max-w-5xl mx-auto" id="itinerary">
+    <h2 class="text-4xl font-bold mb-14 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Tour Itineraries
+    </h2>
+    <div class="space-y-14">
+     <article class="bg-white rounded-2xl shadow-lg p-10 scroll-fade" style="transition-delay: 0.3s;">
+      <h3 class="text-3xl font-semibold mb-6 text-yellow-700">
+       City Highlights Tour
+      </h3>
+      <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg leading-relaxed">
+       <li>
+        <strong>
+         Duration:
+        </strong>
+        4 hours of immersive exploration
+       </li>
+       <li>
+        <strong>
+         Starting Point:
+        </strong>
+        Iconic City Hall Plaza
+       </li>
+       <li>
+        <strong>
+         Landmarks Included:
+        </strong>
+        City Hall, Golden Arch Bridge, St. Mary's Cathedral
+       </li>
+       <li>
+        <strong>
+         Special Activities:
+        </strong>
+        Guided photo walk with pro tips, local snack tasting experience
+       </li>
+      </ul>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg p-10 scroll-fade" style="transition-delay: 0.5s;">
+      <h3 class="text-3xl font-semibold mb-6 text-yellow-700">
+       Cultural Immersion Tour
+      </h3>
+      <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg leading-relaxed">
+       <li>
+        <strong>
+         Duration:
+        </strong>
+        6 hours of deep cultural discovery
+       </li>
+       <li>
+        <strong>
+         Starting Point:
+        </strong>
+        Bustling Old Town Market Entrance
+       </li>
+       <li>
+        <strong>
+         Landmarks Included:
+        </strong>
+        Old Town Market, City Art Museum, Central Park
+       </li>
+       <li>
+        <strong>
+         Special Activities:
+        </strong>
+        Hands-on art workshop, traditional music and dance performance
+       </li>
+      </ul>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg p-10 scroll-fade" style="transition-delay: 0.7s;">
+      <h3 class="text-3xl font-semibold mb-6 text-yellow-700">
+       Full Experience Tour
+      </h3>
+      <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg leading-relaxed">
+       <li>
+        <strong>
+         Duration:
+        </strong>
+        Full 8-hour day of discovery and delight
+       </li>
+       <li>
+        <strong>
+         Starting Point:
+        </strong>
+        City Hall Plaza
+       </li>
+       <li>
+        <strong>
+         Landmarks Included:
+        </strong>
+        All featured landmarks for a comprehensive experience
+       </li>
+       <li>
+        <strong>
+         Special Activities:
+        </strong>
+        Gourmet lunch at a local restaurant, exclusive guided museum tour, sunset river cruise with refreshments
+       </li>
+      </ul>
+     </article>
+    </div>
+   </section>
+   <!-- Booking Options -->
+   <section class="max-w-4xl mx-auto bg-yellow-50 rounded-3xl shadow-2xl p-12" id="booking">
+    <h2 class="text-4xl font-bold mb-10 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Book Your Tour
+    </h2>
+    <form action="#" class="space-y-10 scroll-fade" method="POST" novalidate="" style="transition-delay: 0.3s;">
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div>
+       <label class="block text-gray-800 font-semibold mb-3" for="name">
+        Full Name
+       </label>
+       <input class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-800 font-semibold mb-3" for="email">
+        Email Address
+       </label>
+       <input class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+      </div>
+     </div>
+     <div>
+      <label class="block text-gray-800 font-semibold mb-3" for="tour">
+       Select Tour
+      </label>
+      <select class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition" id="tour" name="tour" required="">
+       <option disabled="" selected="" value="">
+        Select a tour
+       </option>
+       <option value="city-highlights">
+        City Highlights Tour - $50
+       </option>
+       <option value="cultural-immersion">
+        Cultural Immersion Tour - $75
+       </option>
+       <option value="full-experience">
+        Full Experience Tour - $120
+       </option>
+      </select>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div>
+       <label class="block text-gray-800 font-semibold mb-3" for="date">
+        Preferred Date
+       </label>
+       <input class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition" id="date" min="" name="date" required="" type="date"/>
+      </div>
+      <div>
+       <label class="block text-gray-800 font-semibold mb-3" for="group-size">
+        Group Size
+       </label>
+       <select class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition" id="group-size" name="group-size" required="">
+        <option disabled="" selected="" value="">
+         Select group size
+        </option>
+        <option value="1-4">
+         1-4 (Private Tour)
+        </option>
+        <option value="5-10">
+         5-10 (Small Group)
+        </option>
+        <option value="11+">
+         11+ (Large Group)
+        </option>
+       </select>
+      </div>
+     </div>
+     <button class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-extrabold py-5 rounded-xl shadow-lg transition btn-glow" type="submit">
+      Confirm Booking
+     </button>
+    </form>
+   </section>
+   <!-- Customer Testimonials -->
+   <section class="max-w-6xl mx-auto" id="testimonials">
+    <h2 class="text-4xl font-bold mb-14 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     What Our Customers Say
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+     <blockquote class="bg-white rounded-3xl shadow-xl p-10 flex flex-col scroll-fade" style="transition-delay: 0.3s;">
+      <p class="text-gray-800 flex-grow italic text-lg leading-relaxed">
+       "The City Highlights Tour was a breathtaking experience! Our guide’s passion and knowledge made every stop come alive. The photo walk tips helped me capture stunning shots."
+      </p>
+      <footer class="mt-8 text-right text-yellow-700 font-bold text-xl">
+       – Sarah M.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-3xl shadow-xl p-10 flex flex-col scroll-fade" style="transition-delay: 0.5s;">
+      <p class="text-gray-800 flex-grow italic text-lg leading-relaxed">
+       "The Cultural Immersion Tour was a feast for the senses. The art workshop was inspiring, and the traditional music performance left me deeply moved."
+      </p>
+      <footer class="mt-8 text-right text-yellow-700 font-bold text-xl">
+       – David L.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-3xl shadow-xl p-10 flex flex-col scroll-fade" style="transition-delay: 0.7s;">
+      <p class="text-gray-800 flex-grow italic text-lg leading-relaxed">
+       "The Full Experience Tour was the perfect way to dive into the city’s culture and history. The sunset river cruise was magical and a perfect end to the day."
+      </p>
+      <footer class="mt-8 text-right text-yellow-700 font-bold text-xl">
+       – Emily R.
+      </footer>
+     </blockquote>
+    </div>
+   </section>
+   <!-- Interactive Map -->
+   <section class="max-w-7xl mx-auto" id="map">
+    <h2 class="text-4xl font-bold mb-14 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Explore Our Tour Routes
+    </h2>
+    <div class="aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl scroll-fade" style="transition-delay: 0.3s;">
+     <img alt="Interactive map showing tour routes and landmarks with icons and paths" class="w-full h-full object-cover" height="720" loading="lazy" src="https://storage.googleapis.com/a1aa/image/72a35c6f-1dcd-4535-5aa2-9c43950b6abf.jpg" width="1280"/>
+    </div>
+   </section>
+   <!-- Cultural Insights Blog -->
+   <section class="max-w-7xl mx-auto" id="blog">
+    <h2 class="text-4xl font-bold mb-14 text-yellow-600 text-center pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Cultural Insights Blog
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+     <article class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.3s;">
+      <img alt="Historic landmark with ancient architecture and tourists exploring" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/06d8396e-6ecb-4c82-fd01-cb0fcda32e4c.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-5 text-yellow-700">
+        The History Behind City Hall
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Dive into the captivating story of City Hall’s construction, its architectural marvels, and its pivotal role in shaping the city’s governance and identity.
+       </p>
+       <a class="mt-6 inline-block text-yellow-600 font-semibold hover:underline" href="#">
+        Read More →
+       </a>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.5s;">
+      <img alt="Art museum interior with modern paintings and visitors admiring exhibits" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eaf84421-5df5-4a58-16b6-7d164616b9f6.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-5 text-yellow-700">
+        Exploring the City Art Museum
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Discover the museum’s rich collection, the stories behind the art, and the local artists who inspire the city’s creative spirit and cultural vibrancy.
+       </p>
+       <a class="mt-6 inline-block text-yellow-600 font-semibold hover:underline" href="#">
+        Read More →
+       </a>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col scroll-fade zoomIn" style="transition-delay: 0.7s;">
+      <img alt="Traditional market stalls with colorful crafts and shoppers browsing" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/06197498-5dc4-4e53-4eb2-3dedb91a35b3.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold mb-5 text-yellow-700">
+        The Vibrant Old Town Market
+       </h3>
+       <p class="text-gray-700 flex-grow leading-relaxed">
+        Explore the market’s colorful history, the cultural traditions that keep it thriving, and the unique crafts and flavors you can experience today.
+       </p>
+       <a class="mt-6 inline-block text-yellow-600 font-semibold hover:underline" href="#">
+        Read More →
+       </a>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Social Media Links -->
+   <section class="max-w-4xl mx-auto text-center py-20" id="social">
+    <h2 class="text-4xl font-bold mb-12 text-yellow-600 pulseYellow scroll-fade" style="transition-delay: 0.1s;">
+     Follow Us for Updates &amp; Exclusive Promotions
+    </h2>
+    <div class="flex justify-center space-x-14 text-yellow-600 text-5xl">
+     <a aria-label="Facebook" class="hover:text-yellow-700 transition transform hover:scale-110" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-facebook-square">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-yellow-700 transition transform hover:scale-110" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-twitter-square">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-yellow-700 transition transform hover:scale-110" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-instagram-square">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-yellow-700 transition transform hover:scale-110" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-linkedin">
+      </i>
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-yellow-600 text-yellow-100 py-8 text-center select-none">
+   <p class="text-sm sm:text-base font-semibold tracking-wide">
+    © 2024 Landmark Highlights. All rights reserved.
+   </p>
+  </footer>
+  <script>
+   // Set minimum date for booking date input to today
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+
+    // Scroll fade-in animation
+    const scrollFadeElements = document.querySelectorAll('.scroll-fade');
+    const observerOptions = {
+      threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    scrollFadeElements.forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+ </body>
+</html>

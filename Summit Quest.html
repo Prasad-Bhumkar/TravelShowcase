@@ -1,0 +1,365 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Summit Quest - Mountain Climbing &amp; Extreme Adventure Tours
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md fixed w-full z-30">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="flex justify-between items-center h-16">
+     <a class="text-3xl font-bold text-indigo-700 tracking-wide" href="#">
+      Summit Quest
+     </a>
+     <div class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+      <a class="hover:text-indigo-600 transition" href="#tours">
+       Tours
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#about">
+       About
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#gallery">
+       Gallery
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#testimonials">
+       Testimonials
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#contact">
+       Contact
+      </a>
+     </div>
+     <div class="md:hidden">
+      <button class="text-gray-700 focus:outline-none" id="menu-btn">
+       <i class="fas fa-bars fa-2x">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+    <a class="block px-6 py-3 border-b border-gray-200 text-gray-700 font-semibold hover:bg-indigo-50 transition" href="#tours">
+     Tours
+    </a>
+    <a class="block px-6 py-3 border-b border-gray-200 text-gray-700 font-semibold hover:bg-indigo-50 transition" href="#about">
+     About
+    </a>
+    <a class="block px-6 py-3 border-b border-gray-200 text-gray-700 font-semibold hover:bg-indigo-50 transition" href="#gallery">
+     Gallery
+    </a>
+    <a class="block px-6 py-3 border-b border-gray-200 text-gray-700 font-semibold hover:bg-indigo-50 transition" href="#testimonials">
+     Testimonials
+    </a>
+    <a class="block px-6 py-3 text-gray-700 font-semibold hover:bg-indigo-50 transition" href="#contact">
+     Contact
+    </a>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="relative pt-24 pb-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col-reverse md:flex-row items-center md:items-start">
+    <div class="w-full md:w-1/2 text-center md:text-left">
+     <h1 class="text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
+      Summit Quest
+     </h1>
+     <p class="text-xl sm:text-2xl text-indigo-200 mb-8 max-w-lg mx-auto md:mx-0">
+      Embark on bold mountain climbing and extreme adventure tours that push your limits and elevate your spirit.
+     </p>
+     <a class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition" href="#tours">
+      Explore Tours
+     </a>
+    </div>
+    <div class="w-full md:w-1/2 mb-10 md:mb-0">
+     <img alt="A mountain climber standing triumphantly on a rocky summit at sunrise with clouds below and a vibrant orange sky" class="rounded-xl shadow-2xl mx-auto max-w-full" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fa15d1b7-0a86-4e1c-59fd-2e4b20848976.jpg" width="600"/>
+    </div>
+   </div>
+  </header>
+  <!-- Tours Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16" id="tours">
+   <h2 class="text-4xl font-extrabold text-indigo-900 mb-12 text-center">
+    Our Adventure Tours
+   </h2>
+   <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="A group of climbers ascending a steep snowy alpine summit with clear blue skies" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ec6ff6a3-f4b8-4f5f-f4fb-7c3e81aee8a8.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Alpine Summit Climb
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Conquer the highest alpine peaks with expert guides on this thrilling 7-day expedition.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="A climber scaling a vertical rock face with safety ropes and harness on a sunny day" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c29ccb33-580a-4907-3c7c-ae51892f44d5.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Rock Face Extreme Climb
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Test your skills on challenging vertical rock faces with professional safety and coaching.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="Adventurers crossing a glacier with crampons and ice axes under a bright blue sky" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f08a66cf-b6c5-479f-b5ab-6da117d55f27.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Glacier Traverse Adventure
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Explore vast glaciers and icy landscapes on this guided 5-day traverse tour.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="Climber scaling a red desert sandstone rock formation with clear skies" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a9b1b145-b176-4184-13fc-a178483febc3.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Desert Rock Climbing
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Experience the thrill of climbing unique desert sandstone formations in a stunning environment.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="Adventurers ziplining through a dense jungle canopy with lush green trees" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f703936c-f20d-4f0f-9dd6-b001ba2c1d17.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Jungle Canopy Adventure
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Zipline and climb through tropical jungle canopies for an adrenaline-packed experience.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+     <img alt="Climbers ascending a snowy peak in winter gear with snow falling gently" class="w-full h-56 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b50281ba-9665-4427-5031-b6b3b43dc1f7.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-2xl font-semibold text-indigo-800 mb-2">
+       Snow Peak Winter Expedition
+      </h3>
+      <p class="text-gray-700 mb-4">
+       Brave the cold and snow on this expert-led winter climbing expedition to snowy peaks.
+      </p>
+      <a class="text-indigo-600 font-semibold hover:underline inline-flex items-center" href="#contact">
+       Book Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section class="bg-indigo-100 py-16" id="about">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center md:items-start gap-12">
+    <div class="md:w-1/2">
+     <img alt="Experienced mountain guides leading a group of climbers on a rocky trail with mountains in the background" class="rounded-xl shadow-lg mx-auto md:mx-0" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8cd272e5-f3ea-4f3c-52b4-1368ab228392.jpg" width="600"/>
+    </div>
+    <div class="md:w-1/2">
+     <h2 class="text-4xl font-extrabold text-indigo-900 mb-6">
+      About Summit Quest
+     </h2>
+     <p class="text-gray-800 mb-6 text-lg leading-relaxed">
+      Summit Quest is dedicated to providing bold and unforgettable mountain climbing and extreme adventure tours. Our expert guides ensure safety, challenge, and exhilaration on every expedition. Whether you are a seasoned climber or a passionate beginner, we have the perfect adventure for you.
+     </p>
+     <p class="text-gray-800 mb-6 text-lg leading-relaxed">
+      We believe in pushing limits, embracing nature’s raw beauty, and creating lifelong memories. Join us to explore the world’s most breathtaking peaks and landscapes.
+     </p>
+     <a class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition" href="#contact">
+      Get in Touch
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Gallery Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16" id="gallery">
+   <h2 class="text-4xl font-extrabold text-indigo-900 mb-12 text-center">
+    Gallery
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+    <img alt="A climber gripping a rugged rock face with a clear blue sky in the background" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8264346b-edef-4473-bdc8-dce58302c263.jpg" width="400"/>
+    <img alt="A breathtaking sunset casting orange and purple hues over a jagged mountain range" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b96a6d2e-c527-49d2-5f94-1f797bf1b623.jpg" width="400"/>
+    <img alt="A group of adventurers sitting around a campfire under a starry night sky in the mountains" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/187f5333-2ca7-4e08-8613-df58c6456867.jpg" width="400"/>
+    <img alt="A snowy mountain peak piercing through clouds with a bright blue sky" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/51ce276e-1fde-46eb-5b39-972eaf07c053.jpg" width="400"/>
+    <img alt="Close-up of a climber preparing climbing gear including ropes and carabiners" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ff259583-d018-48a1-0673-7e1f060c25a9.jpg" width="400"/>
+    <img alt="A winding mountain trail cutting through a dense green forest with sunlight filtering through" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0fec8e3c-2e78-4816-9686-e0124cb3a679.jpg" width="400"/>
+    <img alt="A climber reaching the summit with arms raised in victory against a clear sky" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/533f6092-cc48-4c71-0a7d-86e274d1ddf2.jpg" width="400"/>
+    <img alt="An adventurer ice climbing a frozen waterfall with crampons and ice axes" class="rounded-lg shadow-md object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2a018227-e6d1-4c05-8b34-812175a85e8a.jpg" width="400"/>
+   </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="bg-indigo-100 py-16" id="testimonials">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <h2 class="text-4xl font-extrabold text-indigo-900 mb-12 text-center">
+     What Our Adventurers Say
+    </h2>
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "Summit Quest took me on the most exhilarating climb of my life. The guides were professional and supportive, and the views were absolutely breathtaking."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – Emily R.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "The Glacier Traverse Adventure was challenging but incredibly rewarding. I felt safe every step of the way thanks to the expert team."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – Marcus T.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "I loved the Jungle Canopy Adventure! Ziplining through the trees was a unique experience I’ll never forget."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – Sarah L.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "The Snow Peak Winter Expedition pushed me to my limits but the camaraderie and stunning snowy landscapes made it all worthwhile."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – David K.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "Summit Quest’s Desert Rock Climbing tour was an unforgettable adventure. The sandstone formations were unlike anything I’ve climbed before."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – Olivia M.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <p class="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+       "Professional, fun, and challenging. I highly recommend Summit Quest for anyone looking to experience extreme adventure safely."
+      </p>
+      <footer class="text-indigo-700 font-semibold text-right">
+       – James P.
+      </footer>
+     </blockquote>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16" id="contact">
+   <h2 class="text-4xl font-extrabold text-indigo-900 mb-12 text-center">
+    Get in Touch
+   </h2>
+   <form action="#" class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-10" method="POST" novalidate="">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+     <div>
+      <label class="block text-gray-700 font-semibold mb-2" for="firstName">
+       First Name
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="firstName" name="firstName" placeholder="Your first name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-semibold mb-2" for="lastName">
+       Last Name
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="lastName" name="lastName" placeholder="Your last name" required="" type="text"/>
+     </div>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="email">
+      Email Address
+     </label>
+     <input class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="message">
+      Message
+     </label>
+     <textarea class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+    </div>
+    <div class="text-center">
+     <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-10 py-4 rounded-lg shadow-lg transition" type="submit">
+      Send Message
+     </button>
+    </div>
+   </form>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-indigo-200 py-8">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-sm">
+     © 2024 Summit Quest. All rights reserved.
+    </p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+     <a aria-label="Facebook" class="hover:text-white transition" href="#">
+      <i class="fab fa-facebook fa-lg">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition" href="#">
+      <i class="fab fa-twitter fa-lg">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition" href="#">
+      <i class="fab fa-instagram fa-lg">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-white transition" href="#">
+      <i class="fab fa-linkedin fa-lg">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,502 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Ocean Luxury - Premium Cruise Vacations &amp; Ocean Adventures
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes pulseScale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
+    .pulseScale {
+      animation: pulseScale 3s ease-in-out infinite;
+    }
+    /* Scroll reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-800">
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+   <img alt="A stunning luxury cruise ship sailing on calm blue ocean waters during a vibrant sunset with golden and pink hues in the sky" class="absolute inset-0 w-full h-full object-cover" height="1080" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f51a3e72-d2e6-4ba7-c87f-7a00d8ace714.jpg" width="1920"/>
+   <div class="relative z-10 bg-black bg-opacity-60 p-8 rounded max-w-5xl text-center mx-4 fadeInUp" style="animation-delay: 0.3s;">
+    <h1 class="text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-wide">
+     Experience the Pinnacle of Luxury Ocean Travel
+    </h1>
+    <p class="mt-6 text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto tracking-wide">
+     Discover breathtaking destinations aboard the world’s most exquisite cruise ships.
+    </p>
+    <a aria-label="Book Your Dream Cruise" class="inline-block mt-10 px-10 py-4 bg-gradient-to-r from-blue-600 to-teal-400 text-white text-xl font-semibold rounded shadow-lg hover:from-blue-700 hover:to-teal-500 transition transform hover:scale-105 pulseScale" href="#call-to-action">
+     Book Your Dream Cruise
+    </a>
+   </div>
+   <div aria-hidden="true" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-4xl">
+    <i class="fas fa-angle-down">
+    </i>
+   </div>
+  </section>
+  <!-- Welcome Message -->
+  <section class="py-20 px-6 max-w-7xl mx-auto text-center scroll-reveal" id="welcome" style="transition-delay: 0.2s;">
+   <h2 class="text-5xl font-bold mb-8 text-gray-900 tracking-wide">
+    Welcome to Ocean Luxury
+   </h2>
+   <p class="max-w-4xl mx-auto text-xl sm:text-2xl text-gray-700 leading-relaxed tracking-wide">
+    At Ocean Luxury, we specialize in crafting unforgettable luxury cruise vacations and ocean adventures tailored to your desires. From personalized service to exclusive onboard experiences, we ensure every journey is as exceptional as the destinations you explore.
+   </p>
+   <div class="mt-12 flex flex-col sm:flex-row justify-center gap-8 max-w-4xl mx-auto">
+    <div class="bg-gradient-to-tr from-blue-600 to-teal-400 rounded-lg p-6 text-white shadow-lg transform hover:scale-105 transition cursor-default">
+     <i class="fas fa-star text-4xl mb-4">
+     </i>
+     <h3 class="text-2xl font-semibold mb-2">
+      Tailored Luxury
+     </h3>
+     <p>
+      Every detail is customized to your preferences, ensuring a unique and personal experience.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-teal-400 to-blue-600 rounded-lg p-6 text-white shadow-lg transform hover:scale-105 transition cursor-default">
+     <i class="fas fa-globe-americas text-4xl mb-4">
+     </i>
+     <h3 class="text-2xl font-semibold mb-2">
+      Global Destinations
+     </h3>
+     <p>
+      Explore the world’s most exclusive ports and hidden gems with our expert guides.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-blue-600 to-teal-400 rounded-lg p-6 text-white shadow-lg transform hover:scale-105 transition cursor-default">
+     <i class="fas fa-cocktail text-4xl mb-4">
+     </i>
+     <h3 class="text-2xl font-semibold mb-2">
+      Gourmet Dining
+     </h3>
+     <p>
+      Indulge in world-class cuisine crafted by renowned chefs onboard.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Destinations -->
+  <section class="bg-gray-50 py-20 px-6 max-w-7xl mx-auto scroll-reveal" id="destinations" style="transition-delay: 0.4s;">
+   <h2 class="text-5xl font-bold mb-16 text-center text-gray-900 tracking-wide">
+    Explore Our Destinations
+   </h2>
+   <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Luxury cruise ship sailing along the Mediterranean coastline with clear blue waters and historic coastal towns" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f43baada-bdcb-4486-827f-e9fd174f7f83.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-4 text-gray-900 tracking-wide">
+       Mediterranean
+      </h3>
+      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
+       Sail through sun-drenched shores, ancient ruins, and vibrant cultures. Experience gourmet dining, exclusive shore excursions, and breathtaking sunsets.
+      </p>
+      <a aria-label="Explore Mediterranean Cruises" class="mt-6 inline-block text-blue-600 font-semibold hover:underline" href="#featured-cruises">
+       Explore Cruises →
+      </a>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Luxury cruise ship anchored near a pristine Caribbean island with turquoise waters and white sandy beaches" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/91e71ddc-c85c-4cbd-ed6a-383887c6d83f.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-4 text-gray-900 tracking-wide">
+       Caribbean
+      </h3>
+      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
+       Discover crystal-clear waters, vibrant coral reefs, and lively island cultures. Enjoy private beach access, water sports, and world-class entertainment.
+      </p>
+      <a aria-label="Explore Caribbean Cruises" class="mt-6 inline-block text-blue-600 font-semibold hover:underline" href="#featured-cruises">
+       Explore Cruises →
+      </a>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Luxury cruise ship cruising near a lush South Pacific island with palm trees and turquoise lagoon" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7bfebf6e-aa50-4cff-2610-d57073ec7b47.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-4 text-gray-900 tracking-wide">
+       South Pacific
+      </h3>
+      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
+       Immerse yourself in exotic island paradises, vibrant marine life, and tranquil lagoons. Experience cultural ceremonies and exclusive island adventures.
+      </p>
+      <a aria-label="Explore South Pacific Cruises" class="mt-6 inline-block text-blue-600 font-semibold hover:underline" href="#featured-cruises">
+       Explore Cruises →
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section class="py-20 px-6 max-w-7xl mx-auto scroll-reveal" id="why-choose-us" style="transition-delay: 0.6s;">
+   <h2 class="text-5xl font-bold mb-16 text-center text-gray-900 tracking-wide">
+    Why Choose Ocean Luxury?
+   </h2>
+   <div class="grid gap-16 sm:grid-cols-2 lg:grid-cols-4 text-center">
+    <div class="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-couch text-7xl text-blue-600 mb-6 animate-bounce">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Unmatched Comfort
+     </h3>
+     <p class="text-gray-700 max-w-xs text-lg leading-relaxed">
+      Spacious suites, world-class amenities, and elegant design ensure your journey is as relaxing as the destination.
+     </p>
+    </div>
+    <div class="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-user-tie text-7xl text-blue-600 mb-6 animate-pulse">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Personalized Service
+     </h3>
+     <p class="text-gray-700 max-w-xs text-lg leading-relaxed">
+      Dedicated concierge and tailored experiences crafted to your preferences for a truly bespoke vacation.
+     </p>
+    </div>
+    <div class="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-gem text-7xl text-blue-600 mb-6 animate-pulse">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Exclusive Experiences
+     </h3>
+     <p class="text-gray-700 max-w-xs text-lg leading-relaxed">
+      Access private events, unique shore excursions, and curated onboard activities unavailable elsewhere.
+     </p>
+    </div>
+    <div class="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-leaf text-7xl text-blue-600 mb-6 animate-bounce">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Sustainable Travel
+     </h3>
+     <p class="text-gray-700 max-w-xs text-lg leading-relaxed">
+      Commitment to eco-friendly practices and responsible tourism to preserve the beauty of our oceans.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Featured Cruises -->
+  <section class="bg-gray-50 py-20 px-6 max-w-7xl mx-auto scroll-reveal" id="featured-cruises" style="transition-delay: 0.8s;">
+   <h2 class="text-5xl font-bold mb-16 text-center text-gray-900 tracking-wide">
+    Featured Cruises
+   </h2>
+   <div class="grid gap-12 sm:grid-cols-1 md:grid-cols-3">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Elegant luxury cruise ship sailing the Mediterranean Sea with scenic coastal views" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f3cc999d-9dd6-45aa-d9a0-8b9d750c3b38.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-5 text-gray-900 tracking-wide">
+       Mediterranean Elegance
+      </h3>
+      <p class="text-gray-700 flex-grow mb-6 text-lg leading-relaxed">
+       10 nights exploring Italy, Greece, and Spain with gourmet dining and exclusive shore excursions.
+      </p>
+      <p class="font-semibold text-blue-700 text-2xl tracking-wide">
+       Starting at $7,999 per person
+      </p>
+      <a aria-label="Book Mediterranean Elegance Cruise" class="mt-8 inline-block self-start bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition transform hover:scale-105" href="#call-to-action">
+       Book Now
+      </a>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Luxury cruise ship anchored near a tropical Caribbean island with crystal-clear waters" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/32363308-f2cd-470e-d78b-925a6d86d786.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-5 text-gray-900 tracking-wide">
+       Caribbean Paradise
+      </h3>
+      <p class="text-gray-700 flex-grow mb-6 text-lg leading-relaxed">
+       7 nights visiting private islands, snorkeling reefs, and enjoying world-class entertainment.
+      </p>
+      <p class="font-semibold text-blue-700 text-2xl tracking-wide">
+       Starting at $5,499 per person
+      </p>
+      <a aria-label="Book Caribbean Paradise Cruise" class="mt-8 inline-block self-start bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition transform hover:scale-105" href="#call-to-action">
+       Book Now
+      </a>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition duration-500">
+     <img alt="Luxury cruise ship cruising near a lush South Pacific island with turquoise lagoon and palm trees" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7e678fef-6f38-41ab-2152-31644ec8f086.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-3xl font-semibold mb-5 text-gray-900 tracking-wide">
+       South Pacific Serenity
+      </h3>
+      <p class="text-gray-700 flex-grow mb-6 text-lg leading-relaxed">
+       14 nights exploring Fiji, Tahiti, and Bora Bora with cultural experiences and private beach access.
+      </p>
+      <p class="font-semibold text-blue-700 text-2xl tracking-wide">
+       Starting at $12,499 per person
+      </p>
+      <a aria-label="Book South Pacific Serenity Cruise" class="mt-8 inline-block self-start bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition transform hover:scale-105" href="#call-to-action">
+       Book Now
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-20 px-6 max-w-7xl mx-auto bg-white scroll-reveal" id="testimonials" style="transition-delay: 1s;">
+   <h2 class="text-5xl font-bold mb-16 text-center text-gray-900 tracking-wide">
+    What Our Clients Say
+   </h2>
+   <div class="max-w-6xl mx-auto grid gap-12 sm:grid-cols-1 md:grid-cols-3">
+    <blockquote class="bg-gradient-to-tr from-blue-600 to-teal-400 p-10 rounded-lg shadow-lg flex flex-col h-full text-white transform hover:scale-105 transition duration-500">
+     <p class="italic flex-grow text-lg leading-relaxed tracking-wide">
+      "Our Mediterranean cruise with Ocean Luxury was beyond our wildest dreams. The service was impeccable, and every detail was thoughtfully planned. Truly a once-in-a-lifetime experience."
+     </p>
+     <footer class="mt-8 text-right font-semibold tracking-wide">
+      – Sarah &amp; Michael T.
+     </footer>
+    </blockquote>
+    <blockquote class="bg-gradient-to-tr from-teal-400 to-blue-600 p-10 rounded-lg shadow-lg flex flex-col h-full text-white transform hover:scale-105 transition duration-500">
+     <p class="italic flex-grow text-lg leading-relaxed tracking-wide">
+      "From the moment we booked to the final day onboard, Ocean Luxury exceeded all expectations. The personalized attention and exclusive excursions made our Caribbean trip unforgettable."
+     </p>
+     <footer class="mt-8 text-right font-semibold tracking-wide">
+      – David R.
+     </footer>
+    </blockquote>
+    <blockquote class="bg-gradient-to-tr from-blue-600 to-teal-400 p-10 rounded-lg shadow-lg flex flex-col h-full text-white transform hover:scale-105 transition duration-500">
+     <p class="italic flex-grow text-lg leading-relaxed tracking-wide">
+      "The South Pacific cruise was a dream come true. Ocean Luxury’s commitment to sustainable travel made us feel good about our vacation, and the luxury amenities kept us pampered throughout."
+     </p>
+     <footer class="mt-8 text-right font-semibold tracking-wide">
+      – Emily K.
+     </footer>
+    </blockquote>
+   </div>
+  </section>
+  <!-- Additional Info Section -->
+  <section class="py-20 px-6 max-w-7xl mx-auto bg-gradient-to-r from-blue-50 to-teal-50 scroll-reveal" id="extra-info" style="transition-delay: 1.2s;">
+   <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-gray-900 tracking-wide">
+    More Reasons to Choose Ocean Luxury
+   </h2>
+   <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 text-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-wine-glass-alt text-5xl text-blue-600 mb-6 animate-pulse">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Award-Winning Cuisine
+     </h3>
+     <p class="text-gray-700 text-lg leading-relaxed">
+      Savor dishes crafted by Michelin-starred chefs paired with the finest wines.
+     </p>
+    </div>
+    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-spa text-5xl text-blue-600 mb-6 animate-bounce">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      World-Class Spa &amp; Wellness
+     </h3>
+     <p class="text-gray-700 text-lg leading-relaxed">
+      Relax and rejuvenate with luxurious spa treatments and wellness programs.
+     </p>
+    </div>
+    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-music text-5xl text-blue-600 mb-6 animate-pulse">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Exclusive Entertainment
+     </h3>
+     <p class="text-gray-700 text-lg leading-relaxed">
+      Enjoy live performances, gala events, and private concerts onboard.
+     </p>
+    </div>
+    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+     <i class="fas fa-shield-alt text-5xl text-blue-600 mb-6 animate-bounce">
+     </i>
+     <h3 class="text-2xl font-semibold mb-4 text-gray-900 tracking-wide">
+      Safety &amp; Hygiene
+     </h3>
+     <p class="text-gray-700 text-lg leading-relaxed">
+      We prioritize your health with rigorous safety protocols and onboard medical staff.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Call to Action -->
+  <section class="bg-gradient-to-r from-blue-600 to-teal-400 py-20 px-6 text-white text-center" id="call-to-action">
+   <h2 class="text-5xl font-bold mb-8 tracking-wide">
+    Ready to Set Sail?
+   </h2>
+   <p class="max-w-4xl mx-auto text-xl sm:text-2xl mb-12 tracking-wide leading-relaxed">
+    Contact us today to start planning your personalized luxury cruise vacation. Our expert travel consultants are here to craft the perfect ocean adventure just for you.
+   </p>
+   <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-4xl mx-auto">
+    <a aria-label="Email Ocean Luxury" class="inline-block bg-white text-blue-700 font-semibold px-10 py-5 rounded shadow hover:bg-gray-100 transition transform hover:scale-110" href="mailto:bookings@oceanluxury.com">
+     <i class="fas fa-envelope mr-3">
+     </i>
+     Email Us
+    </a>
+    <a aria-label="Call Ocean Luxury" class="inline-block bg-white text-blue-700 font-semibold px-10 py-5 rounded shadow hover:bg-gray-100 transition transform hover:scale-110" href="tel:+18001234567">
+     <i class="fas fa-phone-alt mr-3">
+     </i>
+     Call Us
+    </a>
+    <a aria-label="Request a personalized travel consultation" class="inline-block bg-white text-blue-700 font-semibold px-10 py-5 rounded shadow hover:bg-gray-100 transition transform hover:scale-110" href="#">
+     <i class="fas fa-comments mr-3">
+     </i>
+     Request Consultation
+    </a>
+   </div>
+  </section>
+  <!-- Social Media Links -->
+  <footer class="bg-gray-900 py-10 px-6 text-center text-gray-300">
+   <h3 class="text-2xl font-semibold mb-6 tracking-wide">
+    Connect with Ocean Luxury
+   </h3>
+   <div class="flex justify-center space-x-10 text-3xl">
+    <a aria-label="Facebook" class="hover:text-blue-600 transition transform hover:scale-110" href="https://www.facebook.com/oceanluxury" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-facebook-square">
+     </i>
+    </a>
+    <a aria-label="Twitter" class="hover:text-blue-400 transition transform hover:scale-110" href="https://www.twitter.com/oceanluxury" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-twitter-square">
+     </i>
+    </a>
+    <a aria-label="Instagram" class="hover:text-pink-500 transition transform hover:scale-110" href="https://www.instagram.com/oceanluxury" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-instagram-square">
+     </i>
+    </a>
+    <a aria-label="LinkedIn" class="hover:text-blue-700 transition transform hover:scale-110" href="https://www.linkedin.com/company/oceanluxury" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+    <a aria-label="YouTube" class="hover:text-red-600 transition transform hover:scale-110" href="https://www.youtube.com/oceanluxury" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-youtube-square">
+     </i>
+    </a>
+   </div>
+   <a href="index.html" class="block mt-6 text-blue-400 hover:underline">
+    Back to Home
+   </a>
+   <p class="mt-8 text-sm text-gray-500 tracking-wide">
+    © 2024 Ocean Luxury. All rights reserved.
+   </p>
+  </footer>
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    Back to Top
+  </button>
+  <script>
+   // Scroll reveal animation
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+    const displayScrollElement = (element) => {
+      element.classList.add('visible');
+    };
+    const hideScrollElement = (element) => {
+      element.classList.remove('visible');
+    };
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      });
+    };
+    window.addEventListener('scroll', () => {
+      handleScrollAnimation();
+    });
+    // Initial check
+    handleScrollAnimation();
+
+    // Save to Favorites Feature
+    const cruiseCards = document.querySelectorAll('#featured-cruises .bg-white');
+
+    cruiseCards.forEach((card) => {
+      const saveButton = document.createElement('button');
+      saveButton.textContent = 'Save to Favorites';
+      saveButton.className = 'mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition';
+      saveButton.onclick = () => alert('Cruise saved to your favorites!');
+      card.querySelector('.p-8').appendChild(saveButton);
+    });
+
+    // Testimonials Carousel
+    const testimonials = document.querySelectorAll('#testimonials blockquote');
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }
+
+    function prevTestimonial() {
+      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showTestimonial(currentTestimonial);
+
+      const nextButton = document.createElement('button');
+      nextButton.textContent = 'Next';
+      nextButton.className = 'absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md';
+      nextButton.onclick = nextTestimonial;
+
+      const prevButton = document.createElement('button');
+      prevButton.textContent = 'Previous';
+      prevButton.className = 'absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md';
+      prevButton.onclick = prevTestimonial;
+
+      const testimonialsSection = document.querySelector('#testimonials');
+      testimonialsSection.style.position = 'relative';
+      testimonialsSection.appendChild(nextButton);
+      testimonialsSection.appendChild(prevButton);
+    });
+  </script>
+ </body>
+</html>

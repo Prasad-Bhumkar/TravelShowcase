@@ -1,0 +1,569 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Urban Explorer - City Sightseeing Tours &amp; Urban Adventures
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Poppins", sans-serif;
+    }
+    /* Animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 0.8s;
+      animation-timing-function: ease-out;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .pulse-button {
+      animation: pulse 2.5s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+      }
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-indigo-50 via-white to-indigo-50 text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-indigo-200">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="text-3xl font-extrabold text-indigo-700 tracking-widest hover:text-indigo-900 transition" href="#">
+     Urban Explorer
+    </a>
+    <nav class="hidden md:flex space-x-10 font-semibold text-gray-700 tracking-wide">
+     <a class="hover:text-indigo-600 transition relative group" href="#tours">
+      Tour Options
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-indigo-600 transition-all">
+      </span>
+     </a>
+     <a class="hover:text-indigo-600 transition relative group" href="#pricing">
+      Pricing
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-indigo-600 transition-all">
+      </span>
+     </a>
+     <a class="hover:text-indigo-600 transition relative group" href="#testimonials">
+      Testimonials
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-indigo-600 transition-all">
+      </span>
+     </a>
+     <a class="hover:text-indigo-600 transition relative group" href="#blog">
+      Blog
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-indigo-600 transition-all">
+      </span>
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button aria-label="Toggle menu" class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="menu-btn">
+      <i class="fas fa-bars fa-lg">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="hidden md:hidden bg-white border-t border-indigo-200 shadow-lg" id="mobile-menu">
+    <a class="block px-6 py-4 border-b border-indigo-200 font-semibold text-indigo-700 hover:bg-indigo-50 transition" href="#tours">
+     Tour Options
+    </a>
+    <a class="block px-6 py-4 border-b border-indigo-200 font-semibold text-indigo-700 hover:bg-indigo-50 transition" href="#pricing">
+     Pricing
+    </a>
+    <a class="block px-6 py-4 border-b border-indigo-200 font-semibold text-indigo-700 hover:bg-indigo-50 transition" href="#testimonials">
+     Testimonials
+    </a>
+    <a class="block px-6 py-4 font-semibold text-indigo-700 hover:bg-indigo-50 transition" href="#blog">
+     Blog
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative bg-white rounded-b-3xl shadow-xl max-w-7xl mx-auto mt-12 px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center md:items-start gap-12 md:gap-24 overflow-hidden">
+   <div class="max-w-xl text-center md:text-left fade-in-up" style="animation-delay: 0.2s">
+    <h1 class="text-5xl sm:text-6xl font-extrabold text-indigo-700 leading-tight tracking-tight drop-shadow-md">
+     Discover Your City Like Never Before
+    </h1>
+    <p class="mt-6 text-lg text-gray-700 font-medium leading-relaxed">
+     Join
+     <span class="text-indigo-600 font-bold">
+      Urban Explorer
+     </span>
+     for
+        unforgettable city sightseeing tours and urban adventures that reveal
+        hidden gems, vibrant culture, and iconic landmarks.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-6">
+     <a class="inline-block px-10 py-4 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1 pulse-button" href="#tours">
+      Book a Tour
+     </a>
+     <a class="inline-block px-10 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-xl hover:bg-indigo-50 transition transform hover:-translate-y-1" href="#newsletter">
+      Sign Up for Newsletter
+     </a>
+    </div>
+   </div>
+   <div class="w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl ring-4 ring-indigo-200 fade-in-up" style="animation-delay: 0.4s">
+    <img alt="Panoramic city skyline at sunset featuring skyscrapers and a river reflecting the golden light with warm orange and purple hues" class="w-full h-auto object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cb37d2a9-83e7-4937-c286-8595bc63bbfc.jpg" width="600"/>
+   </div>
+  </section>
+  <!-- Tour Options -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="tours">
+   <h2 class="text-4xl font-extrabold text-indigo-700 text-center mb-16 tracking-wide fade-in-up" style="animation-delay: 0.2s">
+    Explore Our Tours
+   </h2>
+   <div class="grid gap-12 md:grid-cols-3">
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.3s">
+     <img alt="Historic city walking tour showing cobblestone streets and old buildings with tourists exploring in warm daylight" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/66f422a2-4d5f-4ca5-9d52-85b9942f5dc3.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       Historic City Walking Tour
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Step back in time as you stroll through charming cobblestone streets,
+            discovering centuries-old architecture and stories from the city's
+            rich past.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#booking">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.4s">
+     <img alt="Night lights and street art tour featuring colorful murals illuminated by city lights with a group of explorers enjoying the scene" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/307f4529-0af3-4287-e762-f2c10c839157.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       Night Lights &amp; Street Art Tour
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Experience the city’s vibrant nightlife and discover stunning street
+            art murals that bring the urban landscape to life after dark.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#booking">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.5s">
+     <img alt="Gourmet food and market tour showing local chefs preparing dishes and fresh produce at a bustling market with vibrant colors" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d8649149-8e2b-4b7f-218a-5fe678d79637.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       Gourmet Food &amp; Market Tour
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Savor the flavors of the city with guided visits to local markets,
+            tasting sessions with chefs, and authentic culinary experiences.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#booking">
+       Learn More →
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Pricing -->
+  <section class="bg-indigo-100 py-24" id="pricing">
+   <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-indigo-700 text-center mb-20 tracking-wide fade-in-up" style="animation-delay: 0.2s">
+     Pricing Plans
+    </h2>
+    <div aria-label="Pricing options" class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
+     <div class="bg-white rounded-3xl shadow-2xl p-10 flex flex-col border border-indigo-300 hover:shadow-indigo-400 transition-shadow duration-500 fade-in-up" style="animation-delay: 0.3s">
+      <h3 class="text-2xl font-extrabold text-indigo-600 mb-6 text-center tracking-wide">
+       Basic Explorer
+      </h3>
+      <p class="text-center text-gray-700 mb-8 font-semibold tracking-wide">
+       Perfect for solo travelers and casual explorers.
+      </p>
+      <div class="text-center mb-10">
+       <span class="text-5xl font-extrabold text-indigo-700">
+        $49
+       </span>
+       <span class="text-gray-600 text-lg">
+        / per tour
+       </span>
+      </div>
+      <ul class="mb-10 space-y-4 text-gray-700 flex-grow font-medium">
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        1 Guided
+              Tour
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Access to
+              Tour Map
+       </li>
+       <li class="flex items-center gap-3 text-red-500 line-through opacity-70">
+        <i class="fas fa-times-circle text-red-500 text-xl">
+        </i>
+        Food Tastings
+       </li>
+       <li class="flex items-center gap-3 text-red-500 line-through opacity-70">
+        <i class="fas fa-times-circle text-red-500 text-xl">
+        </i>
+        Night Tours
+       </li>
+      </ul>
+      <a class="mt-auto inline-block bg-indigo-600 text-white font-semibold text-center rounded-3xl py-4 shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1" href="#booking">
+       Book Now
+      </a>
+     </div>
+     <div class="bg-white rounded-3xl shadow-2xl p-10 flex flex-col border-4 border-indigo-600 hover:shadow-indigo-600 transition-shadow duration-500 fade-in-up" style="animation-delay: 0.4s">
+      <h3 class="text-2xl font-extrabold text-indigo-700 mb-6 text-center tracking-wide">
+       Adventure Seeker
+      </h3>
+      <p class="text-center text-gray-700 mb-8 font-semibold tracking-wide">
+       Ideal for those wanting a full urban experience.
+      </p>
+      <div class="text-center mb-10">
+       <span class="text-5xl font-extrabold text-indigo-700">
+        $89
+       </span>
+       <span class="text-gray-600 text-lg">
+        / per tour
+       </span>
+      </div>
+      <ul class="mb-10 space-y-4 text-gray-700 flex-grow font-medium">
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        3 Guided
+              Tours
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Food
+              Tastings Included
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Night Tours
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Exclusive
+              Access to Events
+       </li>
+      </ul>
+      <a class="mt-auto inline-block bg-indigo-700 text-white font-semibold text-center rounded-3xl py-4 shadow-lg hover:bg-indigo-800 transition transform hover:-translate-y-1" href="#booking">
+       Book Now
+      </a>
+     </div>
+     <div class="bg-white rounded-3xl shadow-2xl p-10 flex flex-col border border-indigo-300 hover:shadow-indigo-400 transition-shadow duration-500 fade-in-up" style="animation-delay: 0.5s">
+      <h3 class="text-2xl font-extrabold text-indigo-600 mb-6 text-center tracking-wide">
+       Ultimate Urbanist
+      </h3>
+      <p class="text-center text-gray-700 mb-8 font-semibold tracking-wide">
+       For explorers who want it all, plus VIP perks.
+      </p>
+      <div class="text-center mb-10">
+       <span class="text-5xl font-extrabold text-indigo-700">
+        $149
+       </span>
+       <span class="text-gray-600 text-lg">
+        / per tour
+       </span>
+      </div>
+      <ul class="mb-10 space-y-4 text-gray-700 flex-grow font-medium">
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        All Tours
+              Included
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Private
+              Guide
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        VIP Event
+              Access
+       </li>
+       <li class="flex items-center gap-3">
+        <i class="fas fa-check-circle text-indigo-600 text-xl">
+        </i>
+        Complimentary
+              Souvenirs
+       </li>
+      </ul>
+      <a class="mt-auto inline-block bg-indigo-600 text-white font-semibold text-center rounded-3xl py-4 shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1" href="#booking">
+       Book Now
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="testimonials">
+   <h2 class="text-4xl font-extrabold text-indigo-700 text-center mb-16 tracking-wide fade-in-up" style="animation-delay: 0.2s">
+    What Our Explorers Say
+   </h2>
+   <div class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
+    <blockquote class="bg-white rounded-3xl shadow-lg p-10 flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.3s">
+     <p class="text-gray-700 italic flex-grow leading-relaxed font-medium">
+      “The Historic City Walking Tour was absolutely breathtaking! Our guide
+          was knowledgeable and friendly, and I discovered parts of the city I
+          never knew existed.”
+     </p>
+     <footer class="mt-8 flex items-center space-x-5">
+      <img alt="Portrait of Jessica D., a smiling woman with short brown hair and glasses" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-300" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8fa97e9e-5f26-44c0-3ca1-305f3b5ee5d5.jpg" width="56"/>
+      <div>
+       <p class="font-semibold text-indigo-600 text-lg tracking-wide">
+        Jessica D.
+       </p>
+       <p class="text-gray-500 text-sm tracking-wide">
+        Travel Blogger
+       </p>
+      </div>
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white rounded-3xl shadow-lg p-10 flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.4s">
+     <p class="text-gray-700 italic flex-grow leading-relaxed font-medium">
+      “The Night Lights &amp; Street Art Tour was a unique experience. The
+          murals were stunning, and the city felt alive in a way I hadn’t
+          experienced before.”
+     </p>
+     <footer class="mt-8 flex items-center space-x-5">
+      <img alt="Portrait of Michael K., a man with short black hair and a beard, smiling" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-300" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/32b3df45-116c-4bee-c1c2-839ee7ef10f1.jpg" width="56"/>
+      <div>
+       <p class="font-semibold text-indigo-600 text-lg tracking-wide">
+        Michael K.
+       </p>
+       <p class="text-gray-500 text-sm tracking-wide">
+        Urban Photographer
+       </p>
+      </div>
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white rounded-3xl shadow-lg p-10 flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.5s">
+     <p class="text-gray-700 italic flex-grow leading-relaxed font-medium">
+      “The Gourmet Food &amp; Market Tour was a food lover’s dream.
+          Sampling local dishes and meeting chefs made this trip unforgettable.”
+     </p>
+     <footer class="mt-8 flex items-center space-x-5">
+      <img alt="Portrait of Anna L., a smiling woman with long blonde hair and blue eyes" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-300" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8239a6d5-f5cf-41e3-082b-e7744aa397b5.jpg" width="56"/>
+      <div>
+       <p class="font-semibold text-indigo-600 text-lg tracking-wide">
+        Anna L.
+       </p>
+       <p class="text-gray-500 text-sm tracking-wide">
+        Food Enthusiast
+       </p>
+      </div>
+     </footer>
+    </blockquote>
+   </div>
+  </section>
+  <!-- Interactive Map & Upcoming Events -->
+  <section class="bg-indigo-100 py-24">
+   <div aria-label="Interactive map and upcoming events" class="max-w-7xl mx-auto px-6 grid gap-16 md:grid-cols-2 items-center">
+    <div class="fade-in-up" style="animation-delay: 0.3s">
+     <h2 class="text-4xl font-extrabold text-indigo-700 mb-8 tracking-wide">
+      Explore Our Tour Routes
+     </h2>
+     <img alt="Interactive city map showing multiple tour routes highlighted in different colors with icons for landmarks and points of interest" class="rounded-3xl shadow-2xl w-full h-auto object-cover ring-4 ring-indigo-300" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/88564b84-6330-4073-ff17-29be483c57fb.jpg" width="600"/>
+    </div>
+    <div class="fade-in-up" style="animation-delay: 0.4s">
+     <h2 class="text-4xl font-extrabold text-indigo-700 mb-8 tracking-wide">
+      Upcoming Events &amp; Tours
+     </h2>
+     <ul class="space-y-8 bg-white rounded-3xl shadow-lg p-8 font-medium text-gray-700">
+      <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-indigo-200 pb-6">
+       <div>
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-2 tracking-wide">
+         Summer Street Festival Tour
+        </h3>
+        <p class="leading-relaxed">
+         Experience the city’s biggest street festival with live music,
+                food stalls, and cultural performances.
+        </p>
+       </div>
+       <time class="mt-4 sm:mt-0 text-indigo-700 font-semibold text-lg tracking-wide" datetime="2024-07-15">
+        July 15, 2024
+       </time>
+      </li>
+      <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-indigo-200 py-6">
+       <div>
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-2 tracking-wide">
+         Night Market &amp; Art Walk
+        </h3>
+        <p class="leading-relaxed">
+         Discover local artists and vendors at the vibrant night market,
+                followed by a guided art walk.
+        </p>
+       </div>
+       <time class="mt-4 sm:mt-0 text-indigo-700 font-semibold text-lg tracking-wide" datetime="2024-08-03">
+        August 3, 2024
+       </time>
+      </li>
+      <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center pt-6">
+       <div>
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-2 tracking-wide">
+         Gourmet Foodie Weekend
+        </h3>
+        <p class="leading-relaxed">
+         A weekend of exclusive food tours, tastings, and cooking classes
+                with top local chefs.
+        </p>
+       </div>
+       <time class="mt-4 sm:mt-0 text-indigo-700 font-semibold text-lg tracking-wide" datetime="2024-09-12">
+        September 12-14, 2024
+       </time>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </section>
+  <!-- Blog -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="blog">
+   <h2 class="text-4xl font-extrabold text-indigo-700 text-center mb-16 tracking-wide fade-in-up" style="animation-delay: 0.2s">
+    Urban Exploration Tips &amp; Stories
+   </h2>
+   <div class="grid gap-12 md:grid-cols-3">
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.3s">
+     <img alt="Traveler taking photos of colorful street art in a narrow city alley with graffiti walls and bright colors" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6640f33c-4fd6-4a6a-77e8-896b7ecde0a1.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       Top 10 Street Art Spots to Visit
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Discover the most vibrant and Instagram-worthy street art locations
+            in the city, perfect for your next urban adventure.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#blog">
+       Read More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.4s">
+     <img alt="Local market bustling with shoppers browsing fresh produce and colorful fruits and vegetables in a lively atmosphere" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/aebe108f-0159-4fff-6a2a-cd1b106cf908.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       How to Navigate Local Markets Like a Pro
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Tips and tricks for exploring local markets, bargaining, and finding
+            the freshest ingredients and unique souvenirs.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#blog">
+       Read More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-500 fade-in-up" style="animation-delay: 0.5s">
+     <img alt="Group of tourists enjoying a city bike tour along a river with bridges and green parks on a sunny day" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/98ad87d4-97fa-4aaf-f329-13095116a1a6.jpg" width="600"/>
+     <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+       Benefits of Exploring the City by Bike
+      </h3>
+      <p class="text-gray-700 flex-grow leading-relaxed font-medium">
+       Learn why biking is one of the best ways to see the city’s hidden
+            corners, stay active, and reduce your carbon footprint.
+      </p>
+      <a class="mt-6 inline-block text-indigo-600 font-semibold hover:underline self-start" href="#blog">
+       Read More →
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Newsletter Signup -->
+  <section class="bg-indigo-700 py-24 rounded-t-3xl shadow-xl max-w-4xl mx-auto px-6 text-center text-white fade-in-up" id="newsletter" style="animation-delay: 0.3s">
+   <h2 class="text-4xl font-extrabold mb-6 tracking-wide">
+    Stay Updated with Urban Explorer
+   </h2>
+   <p class="mb-12 text-lg font-semibold tracking-wide max-w-xl mx-auto leading-relaxed">
+    Subscribe to our newsletter for the latest tours, exclusive offers, and
+      urban exploration tips delivered straight to your inbox.
+   </p>
+   <form action="#" aria-label="Newsletter signup form" class="flex flex-col sm:flex-row justify-center gap-6 max-w-xl mx-auto" method="POST">
+    <input aria-label="Email address" class="w-full sm:w-auto flex-grow rounded-full px-6 py-4 text-indigo-900 font-semibold focus:outline-none focus:ring-4 focus:ring-indigo-300" name="email" placeholder="Enter your email" required="" type="email"/>
+    <button class="bg-white text-indigo-700 font-extrabold rounded-full px-10 py-4 shadow-lg hover:bg-indigo-100 transition transform hover:-translate-y-1" type="submit">
+     Subscribe
+    </button>
+   </form>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-indigo-200 py-8 mt-20 shadow-inner text-gray-600 text-sm">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <p class="mb-4 md:mb-0 tracking-wide">
+     © 2024 Urban Explorer. All rights reserved.
+    </p>
+    <div class="flex space-x-8 text-indigo-600 text-xl">
+     <a aria-label="Facebook" class="hover:text-indigo-800 transition" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-indigo-800 transition" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-indigo-800 transition" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-indigo-800 transition" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Animate fade-in-up elements on scroll
+    const fadeElems = document.querySelectorAll(".fade-in-up");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    fadeElems.forEach((el) => {
+      el.style.animationPlayState = "paused";
+      observer.observe(el);
+    });
+  </script>
+ </body>
+</html>

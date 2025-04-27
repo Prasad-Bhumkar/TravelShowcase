@@ -1,0 +1,732 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Tropical Escape - Your Paradise Awaits
+  </title>
+  <meta content="Discover tropical beach destinations and book your next getaway with Tropical Escape. Relax, explore, and enjoy paradise." name="description"/>
+  <meta content="Tropical Escape, tropical destinations, beach vacations, travel, booking, tropical holidays" name="keywords"/>
+  <meta content="Tropical Escape" name="author"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Pacifico&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            turquoise: '#40E0D0',
+            sandybeige: '#F4E1C1',
+            sunsetorange: '#FF5E3A',
+            lushgreen: '#2E8B57',
+            oceanblue: '#0077B6',
+            coral: '#FF6F61',
+          },
+          fontFamily: {
+            heading: ['Pacifico', 'cursive'],
+            body: ['Open Sans', 'sans-serif'],
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            pulseSlow: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.7' },
+            },
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease forwards',
+            fadeIn: 'fadeIn 1.5s ease forwards',
+            slideInLeft: 'slideInLeft 1s ease forwards',
+            slideInRight: 'slideInRight 1s ease forwards',
+            pulseSlow: 'pulseSlow 3s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+   /* Scrollbar styling for better UX */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f4e1c1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #40e0d0;
+      border-radius: 10px;
+      border: 2px solid #f4e1c1;
+    }
+  </style>
+ </head>
+ <body class="bg-sandybeige font-body text-gray-800 scroll-smooth selection:bg-turquoise selection:text-white">
+  <!-- Navigation -->
+  <nav aria-label="Primary navigation" class="fixed top-0 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-md shadow-md z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a aria-label="Tropical Escape Home" class="text-turquoise font-heading text-3xl select-none focus:outline-none focus:ring-2 focus:ring-turquoise" href="#hero" tabindex="0">
+      Tropical Escape
+     </a>
+     <div class="hidden md:flex space-x-8">
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#destinations" tabindex="0">
+       Destinations
+      </a>
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#experiences" tabindex="0">
+       Experiences
+      </a>
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#booking" tabindex="0">
+       Book Now
+      </a>
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#testimonials" tabindex="0">
+       Testimonials
+      </a>
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#blog" tabindex="0">
+       Travel Tips
+      </a>
+      <a class="text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#footer" tabindex="0">
+       Contact
+      </a>
+     </div>
+     <button aria-expanded="false" aria-label="Toggle menu" class="md:hidden text-turquoise focus:outline-none focus:ring-2 focus:ring-turquoise" id="mobile-menu-button" tabindex="0">
+      <i aria-hidden="true" class="fas fa-bars fa-lg">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="md:hidden hidden px-4 pb-4 space-y-2 bg-white bg-opacity-95 backdrop-blur-md" id="mobile-menu">
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#destinations" tabindex="0">
+     Destinations
+    </a>
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#experiences" tabindex="0">
+     Experiences
+    </a>
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#booking" tabindex="0">
+     Book Now
+    </a>
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#testimonials" tabindex="0">
+     Testimonials
+    </a>
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#blog" tabindex="0">
+     Travel Tips
+    </a>
+    <a class="block text-gray-700 hover:text-turquoise transition focus:outline-none focus:ring-2 focus:ring-turquoise rounded px-2 py-1" href="#footer" tabindex="0">
+     Contact
+    </a>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section aria-label="Hero section with tropical beach background and tagline" class="relative h-screen flex items-center justify-center text-center text-white select-none" id="hero">
+   <img alt="A breathtaking tropical beach at sunset with tall palm trees silhouetted against a vibrant orange and turquoise sky, gentle waves lapping the shore, and soft sandy beach inviting relaxation." class="absolute inset-0 w-full h-full object-cover brightness-75" decoding="async" height="1080" loading="lazy" src="https://storage.googleapis.com/a1aa/image/21555c81-b68a-4286-b7c7-f0b8e5f2a3eb.jpg" width="1920"/>
+   <div class="relative max-w-4xl px-6">
+    <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl leading-tight mb-6 animate-fadeInUp drop-shadow-lg" tabindex="0">
+     Escape to Paradise
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-8 font-semibold drop-shadow-md animate-fadeInUp" style="animation-delay: 0.3s;">
+     Discover your perfect tropical getaway and unwind in nature's beauty.
+    </p>
+    <a class="inline-flex items-center bg-sunsetorange hover:bg-red-600 focus:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-sunsetorange animate-pulseSlow" href="#destinations" role="button" style="animation-delay: 0.6s;" tabindex="0">
+     Explore Destinations
+     <i aria-hidden="true" class="fas fa-arrow-right ml-3">
+     </i>
+    </a>
+   </div>
+  </section>
+  <!-- Destinations Section -->
+  <section aria-label="Featured tropical beach destinations" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="destinations">
+   <h2 class="text-4xl font-heading text-lushgreen mb-12 text-center select-none" tabindex="0">
+    Featured Destinations
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0s;" tabindex="0">
+     <img alt="Crystal clear turquoise waters with overwater bungalows in the Maldives under a bright blue sky with fluffy white clouds." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fa958863-859f-4d92-8765-530bc3e6bda2.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Maldives
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Experience the ultimate luxury in the Maldives, where pristine beaches meet crystal-clear waters and stunning overwater bungalows.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.1s;" tabindex="0">
+     <img alt="A sunny Hawaiian beach with tall palm trees, golden sand, and a distant volcano under a clear blue sky." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3a5723fb-2eb0-450f-980c-c66e32637f34.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Hawaii
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Discover the diverse landscapes of Hawaii, from lush rainforests to volcanic mountains and stunning beaches.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.2s;" tabindex="0">
+     <img alt="Turquoise lagoon in Bora Bora with lush green mountains in the background and a few small boats floating on the water." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4e204ff1-0c98-41e9-af34-9972d093212b.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Bora Bora
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Relax in the serene lagoons of Bora Bora, surrounded by majestic mountains and vibrant coral reefs.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.3s;" tabindex="0">
+     <img alt="Phuket beach with traditional longtail boats anchored on the sandy shore, turquoise water, and limestone cliffs in the background." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b2f1fe6a-a37f-405e-5970-99c74e27ec48.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Phuket
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Explore the vibrant culture and stunning beaches of Phuket, Thailand, with its iconic longtail boats and lively markets.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.4s;" tabindex="0">
+     <img alt="A pristine Bahamas beach with crystal-clear turquoise water, white sand, and palm trees swaying gently in the breeze." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/32ac340e-cfd8-41fc-fa48-40d008ba200a.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Bahamas
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Enjoy the warm sun and clear waters of the Bahamas, perfect for snorkeling, diving, and relaxing on white sandy beaches.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.5s;" tabindex="0">
+     <img alt="Fiji beach at sunset with palm trees silhouetted against a colorful sky of orange, pink, and purple hues, calm ocean waves gently touching the shore." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/84018ff7-3acf-4a4b-bb12-f308173cd22d.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Fiji
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Immerse yourself in the tranquil beauty of Fiji, where stunning sunsets and lush palm trees create a perfect tropical escape.
+      </p>
+      <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+       Learn More
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Experiences Section -->
+  <section aria-label="Unique tropical experiences" class="bg-turquoise bg-opacity-20 py-16 px-4 sm:px-6 lg:px-8" id="experiences">
+   <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-heading text-lushgreen mb-12 text-center select-none" tabindex="0">
+     Unique Experiences
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-slideInLeft" style="animation-delay: 0s;" tabindex="0">
+      <img alt="A couple snorkeling in clear tropical waters surrounded by colorful coral reefs and tropical fish." class="w-32 h-32 object-cover rounded-full mb-6 shadow-lg" decoding="async" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ec002bb1-2f9b-4d37-1eca-808fbfd59aab.jpg" width="128"/>
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Snorkeling Adventures
+      </h3>
+      <p class="text-gray-700">
+       Dive into vibrant coral reefs and swim alongside exotic marine life in crystal-clear waters.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeIn" style="animation-delay: 0.2s;" tabindex="0">
+      <img alt="A tropical beach yoga session at sunrise with a group of people practicing yoga on the sand with palm trees in the background." class="w-32 h-32 object-cover rounded-full mb-6 shadow-lg" decoding="async" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/524789c5-b875-4bc1-aa92-c2db6a9b373a.jpg" width="128"/>
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Beach Yoga &amp; Wellness
+      </h3>
+      <p class="text-gray-700">
+       Rejuvenate your mind and body with guided yoga sessions on serene tropical beaches.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-slideInRight" style="animation-delay: 0.4s;" tabindex="0">
+      <img alt="A couple enjoying a romantic sunset dinner on a tropical beach with tiki torches and lanterns." class="w-32 h-32 object-cover rounded-full mb-6 shadow-lg" decoding="async" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/74925853-3478-45d4-386f-3681c13b9cf3.jpg" width="128"/>
+      <h3 class="text-2xl font-heading text-turquoise mb-3">
+       Romantic Dinners
+      </h3>
+      <p class="text-gray-700">
+       Experience unforgettable candlelit dinners on the beach with stunning sunset views.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Booking Form Section -->
+  <section aria-label="Booking form to check availability for tropical destinations" class="py-16 px-4 sm:px-6 lg:px-8" id="booking">
+   <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 animate-fadeInUp" style="animation-delay: 0.2s;" tabindex="0">
+    <h2 class="text-3xl font-heading text-lushgreen mb-8 text-center select-none">
+     Book Your Tropical Escape
+    </h2>
+    <form aria-describedby="booking-desc" class="space-y-6" id="booking-form" novalidate="">
+     <p class="sr-only" id="booking-desc">
+      Fill out the form to check availability for your tropical getaway.
+     </p>
+     <div>
+      <label class="block text-gray-700 font-semibold mb-2" for="destination">
+       Destination
+      </label>
+      <select aria-required="true" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-turquoise focus:border-turquoise" id="destination" name="destination" required="">
+       <option disabled="" selected="" value="">
+        Select your destination
+       </option>
+       <option value="Maldives">
+        Maldives
+       </option>
+       <option value="Hawaii">
+        Hawaii
+       </option>
+       <option value="Bora Bora">
+        Bora Bora
+       </option>
+       <option value="Phuket">
+        Phuket
+       </option>
+       <option value="Bahamas">
+        Bahamas
+       </option>
+       <option value="Fiji">
+        Fiji
+       </option>
+      </select>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="start-date">
+        Travel Start Date
+       </label>
+       <input aria-required="true" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-turquoise focus:border-turquoise" id="start-date" name="start-date" required="" type="date"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="end-date">
+        Travel End Date
+       </label>
+       <input aria-required="true" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-turquoise focus:border-turquoise" id="end-date" name="end-date" required="" type="date"/>
+      </div>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-semibold mb-2" for="travelers">
+       Number of Travelers
+      </label>
+      <input aria-required="true" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-turquoise focus:border-turquoise" id="travelers" max="20" min="1" name="travelers" required="" type="number" value="1"/>
+     </div>
+     <div class="text-center">
+      <button aria-label="Check availability for selected destination and dates" class="inline-flex items-center bg-sunsetorange hover:bg-red-600 focus:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-sunsetorange" tabindex="0" type="submit">
+       Check Availability
+       <i aria-hidden="true" class="fas fa-check ml-3">
+       </i>
+      </button>
+     </div>
+     <p aria-live="polite" class="mt-4 text-center text-sm font-semibold" id="form-message" role="alert" tabindex="0">
+     </p>
+    </form>
+   </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section aria-label="Customer testimonials from tropical escape travelers" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="testimonials">
+   <h2 class="text-4xl font-heading text-lushgreen mb-12 text-center select-none" tabindex="0">
+    What Our Travelers Say
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0s;" tabindex="0">
+     <img alt="Smiling woman wearing a sunhat on a tropical beach with palm trees and ocean in the background." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b8781192-db45-44c0-218e-b3de0861b685.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "The Maldives trip was a dream come true! The crystal-clear waters and overwater bungalows were breathtaking."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - Emily R.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0.1s;" tabindex="0">
+     <img alt="Happy couple smiling and embracing on a sunny Hawaiian beach with palm trees." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d7c90428-5c52-4d2c-7f64-a76b4e8da368.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "Hawaii exceeded all our expectations. The volcano hikes and beaches made for an unforgettable adventure."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - Jason &amp; Mia
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0.2s;" tabindex="0">
+     <img alt="Traveler smiling and relaxing on a boat in the turquoise lagoon of Bora Bora with mountains in the background." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c02cbf79-1c2c-48b2-3483-f62315789520.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "Bora Bora's serene lagoons and stunning views made it the perfect romantic getaway."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - Sophia L.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0.3s;" tabindex="0">
+     <img alt="Smiling traveler standing on a sandy beach in Phuket with traditional longtail boats and limestone cliffs behind." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e7b48200-04b5-4a9e-d5d5-e82382da8a62.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "Phuket was vibrant and full of life. The beaches and local culture were amazing to explore."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - Daniel K.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0.4s;" tabindex="0">
+     <img alt="Happy family smiling and playing on a white sandy beach in the Bahamas with palm trees and clear water." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c6f0e956-bb84-4739-e256-043201029dc2.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "The Bahamas was perfect for our family vacation. The kids loved the clear waters and sandy beaches."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - The Johnsons
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center animate-fadeInUp" style="animation-delay: 0.5s;" tabindex="0">
+     <img alt="Traveler watching a colorful sunset on a Fiji beach with palm trees and calm ocean waves." class="w-24 h-24 rounded-full object-cover mb-4" decoding="async" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b2818b13-e60a-4214-8713-027af5d5006b.jpg" width="100"/>
+     <blockquote class="text-gray-700 italic mb-4">
+      "Fiji's sunsets and peaceful beaches made it the ultimate place to unwind and recharge."
+     </blockquote>
+     <figcaption class="font-semibold text-turquoise">
+      - Olivia M.
+     </figcaption>
+    </figure>
+   </div>
+  </section>
+  <!-- Blog / Travel Tips Section -->
+  <section aria-label="Travel tips and blog articles" class="bg-sandybeige py-16 px-4 sm:px-6 lg:px-8" id="blog">
+   <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-heading text-lushgreen mb-12 text-center select-none" tabindex="0">
+     Travel Tips &amp; Blog
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+     <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0s;" tabindex="0">
+      <img alt="A tropical beach with a travel journal, sunglasses, and a camera on a wooden table." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dcc2723b-3376-4d56-3e77-6b4ae14a3d24.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-heading text-turquoise mb-3">
+        Packing Essentials for Tropical Trips
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Learn what to pack for your tropical getaway to stay comfortable and prepared for all adventures.
+       </p>
+       <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+        Read More
+       </a>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.1s;" tabindex="0">
+      <img alt="A tropical sunset with a person meditating on the beach." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b0457eca-9d20-4c90-e968-ffe65970244d.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-heading text-turquoise mb-3">
+        Best Wellness Practices on Vacation
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Tips on how to maintain your wellness routine while enjoying your tropical escape.
+       </p>
+       <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+        Read More
+       </a>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col animate-fadeInUp" style="animation-delay: 0.2s;" tabindex="0">
+      <img alt="A tropical beach with a map, compass, and sunglasses on a wooden table." class="w-full h-48 object-cover" decoding="async" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c08d4c4b-bf71-45c5-274a-e630794cc924.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-heading text-turquoise mb-3">
+        Top 10 Hidden Tropical Gems
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Discover lesser-known tropical destinations that offer unique experiences away from the crowds.
+       </p>
+       <a class="mt-4 inline-block self-start bg-lushgreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded shadow focus:outline-none focus:ring-4 focus:ring-lushgreen transition" href="#" role="button" tabindex="0">
+        Read More
+       </a>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <!-- Newsletter Section -->
+  <section aria-label="Newsletter subscription" class="bg-lushgreen py-16 px-4 sm:px-6 lg:px-8">
+   <div class="max-w-3xl mx-auto text-center text-white animate-fadeInUp" style="animation-delay: 0.3s;" tabindex="0">
+    <h2 class="text-3xl font-heading mb-4 select-none">
+     Stay Updated with Tropical Escape
+    </h2>
+    <p class="mb-8 max-w-xl mx-auto">
+     Subscribe to our newsletter for exclusive travel tips, offers, and tropical inspiration.
+    </p>
+    <form aria-describedby="newsletter-desc" class="flex flex-col sm:flex-row sm:justify-center sm:space-x-4" id="newsletter-form" novalidate="">
+     <p class="sr-only" id="newsletter-desc">
+      Subscribe to our newsletter for tropical travel tips and offers.
+     </p>
+     <label class="sr-only" for="newsletter-email">
+      Email address
+     </label>
+     <input aria-required="true" class="w-full sm:w-auto px-4 py-3 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-sandybeige focus:border-sandybeige" id="newsletter-email" name="newsletter-email" placeholder="Your email address" required="" type="email"/>
+     <button aria-label="Subscribe to newsletter" class="mt-4 sm:mt-0 bg-sunsetorange hover:bg-red-600 focus:bg-red-600 text-white font-semibold px-8 py-3 rounded shadow transition focus:outline-none focus:ring-4 focus:ring-sunsetorange" tabindex="0" type="submit">
+      Subscribe
+     </button>
+    </form>
+    <p aria-live="polite" class="mt-3 text-sm font-semibold" id="newsletter-message" role="alert" tabindex="0">
+    </p>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer aria-label="Footer with social media links, newsletter signup, and essential links" class="bg-lushgreen text-white py-12 px-6 sm:px-12" id="footer">
+   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div>
+     <h3 class="font-heading text-2xl mb-4 select-none">
+      Follow Us
+     </h3>
+     <nav aria-label="Social media links" class="flex space-x-6">
+      <a aria-label="Facebook" class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="https://facebook.com" rel="noopener noreferrer" tabindex="0" target="_blank">
+       <i aria-hidden="true" class="fab fa-facebook fa-2x">
+       </i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="https://twitter.com" rel="noopener noreferrer" tabindex="0" target="_blank">
+       <i aria-hidden="true" class="fab fa-twitter fa-2x">
+       </i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="https://instagram.com" rel="noopener noreferrer" tabindex="0" target="_blank">
+       <i aria-hidden="true" class="fab fa-instagram fa-2x">
+       </i>
+      </a>
+      <a aria-label="YouTube" class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="https://youtube.com" rel="noopener noreferrer" tabindex="0" target="_blank">
+       <i aria-hidden="true" class="fab fa-youtube fa-2x">
+       </i>
+      </a>
+     </nav>
+    </div>
+    <div>
+     <h3 class="font-heading text-2xl mb-4 select-none">
+      Newsletter
+     </h3>
+     <form aria-describedby="newsletter-desc-footer" class="flex flex-col sm:flex-row sm:space-x-4" id="newsletter-form-footer" novalidate="">
+      <p class="sr-only" id="newsletter-desc-footer">
+       Subscribe to our newsletter for tropical travel tips and offers.
+      </p>
+      <label class="sr-only" for="newsletter-email-footer">
+       Email address
+      </label>
+      <input aria-required="true" class="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-sandybeige focus:border-sandybeige" id="newsletter-email-footer" name="newsletter-email-footer" placeholder="Your email address" required="" type="email"/>
+      <button aria-label="Subscribe to newsletter" class="mt-4 sm:mt-0 bg-sunsetorange hover:bg-red-600 focus:bg-red-600 text-white font-semibold px-6 py-2 rounded shadow transition focus:outline-none focus:ring-4 focus:ring-sunsetorange" tabindex="0" type="submit">
+       Subscribe
+      </button>
+     </form>
+     <p aria-live="polite" class="mt-3 text-sm font-semibold" id="newsletter-message-footer" role="alert" tabindex="0">
+     </p>
+    </div>
+    <div>
+     <h3 class="font-heading text-2xl mb-4 select-none">
+      Quick Links
+     </h3>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="#" tabindex="0">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="#" tabindex="0">
+        Contact
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="#" tabindex="0">
+        Privacy Policy
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-sandybeige focus:outline-none focus:ring-2 focus:ring-sandybeige rounded" href="#" tabindex="0">
+        Travel Tips Blog
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="mt-12 text-center text-sm text-sandybeige select-none">
+    © 2024 Tropical Escape. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+      menuButton.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', false);
+          }
+        }
+      });
+    });
+
+    // Booking form validation and submission simulation
+    const bookingForm = document.getElementById('booking-form');
+    const formMessage = document.getElementById('form-message');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMessage.textContent = '';
+      const destination = bookingForm['destination'].value;
+      const startDate = bookingForm['start-date'].value;
+      const endDate = bookingForm['end-date'].value;
+      const travelers = bookingForm['travelers'].value;
+
+      if (!destination) {
+        formMessage.textContent = 'Please select a destination.';
+        formMessage.className = 'text-red-600 font-semibold mt-4';
+        bookingForm['destination'].focus();
+        return;
+      }
+      if (!startDate) {
+        formMessage.textContent = 'Please select a start date.';
+        formMessage.className = 'text-red-600 font-semibold mt-4';
+        bookingForm['start-date'].focus();
+        return;
+      }
+      if (!endDate) {
+        formMessage.textContent = 'Please select an end date.';
+        formMessage.className = 'text-red-600 font-semibold mt-4';
+        bookingForm['end-date'].focus();
+        return;
+      }
+      if (new Date(startDate) > new Date(endDate)) {
+        formMessage.textContent = 'Start date cannot be after end date.';
+        formMessage.className = 'text-red-600 font-semibold mt-4';
+        bookingForm['start-date'].focus();
+        return;
+      }
+      if (travelers < 1 || travelers > 20) {
+        formMessage.textContent = 'Number of travelers must be between 1 and 20.';
+        formMessage.className = 'text-red-600 font-semibold mt-4';
+        bookingForm['travelers'].focus();
+        return;
+      }
+
+      // Simulate availability check
+      formMessage.textContent = 'Checking availability...';
+      formMessage.className = 'text-turquoise font-semibold mt-4';
+
+      setTimeout(() => {
+        formMessage.textContent = `Great news! Your trip to ${destination} from ${startDate} to ${endDate} for ${travelers} traveler(s) is available.`;
+        formMessage.className = 'text-lushgreen font-semibold mt-4';
+        bookingForm.reset();
+      }, 1500);
+    });
+
+    // Newsletter form submission simulation (header)
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterMessage = document.getElementById('newsletter-message');
+
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      newsletterMessage.textContent = '';
+      const emailInput = newsletterForm['newsletter-email'];
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        newsletterMessage.textContent = 'Please enter your email address.';
+        newsletterMessage.className = 'text-red-600 font-semibold mt-2';
+        emailInput.focus();
+        return;
+      }
+
+      // Simple email regex validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        newsletterMessage.textContent = 'Please enter a valid email address.';
+        newsletterMessage.className = 'text-red-600 font-semibold mt-2';
+        emailInput.focus();
+        return;
+      }
+
+      newsletterMessage.textContent = 'Subscribing...';
+      newsletterMessage.className = 'text-turquoise font-semibold mt-2';
+
+      setTimeout(() => {
+        newsletterMessage.textContent = 'Thank you for subscribing to our newsletter!';
+        newsletterMessage.className = 'text-lushgreen font-semibold mt-2';
+        newsletterForm.reset();
+      }, 1500);
+    });
+
+    // Newsletter form submission simulation (footer)
+    const newsletterFormFooter = document.getElementById('newsletter-form-footer');
+    const newsletterMessageFooter = document.getElementById('newsletter-message-footer');
+
+    newsletterFormFooter.addEventListener('submit', (e) => {
+      e.preventDefault();
+      newsletterMessageFooter.textContent = '';
+      const emailInput = newsletterFormFooter['newsletter-email-footer'];
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        newsletterMessageFooter.textContent = 'Please enter your email address.';
+        newsletterMessageFooter.className = 'text-red-600 font-semibold mt-2';
+        emailInput.focus();
+        return;
+      }
+
+      // Simple email regex validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        newsletterMessageFooter.textContent = 'Please enter a valid email address.';
+        newsletterMessageFooter.className = 'text-red-600 font-semibold mt-2';
+        emailInput.focus();
+        return;
+      }
+
+      newsletterMessageFooter.textContent = 'Subscribing...';
+      newsletterMessageFooter.className = 'text-turquoise font-semibold mt-2';
+
+      setTimeout(() => {
+        newsletterMessageFooter.textContent = 'Thank you for subscribing to our newsletter!';
+        newsletterMessageFooter.className = 'text-lushgreen font-semibold mt-2';
+        newsletterFormFooter.reset();
+      }, 1500);
+    });
+  </script>
+  <!-- Google Analytics placeholder -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+ </body>
+</html>

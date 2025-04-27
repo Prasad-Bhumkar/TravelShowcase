@@ -1,0 +1,444 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="description" content="Explore historical landmarks and cultural heritage on our guided trails."/>
+  <meta name="keywords" content="heritage trails, historical tours, cultural landmarks"/>
+  <meta property="og:title" content="Heritage Trails"/>
+  <meta property="og:description" content="Explore historical landmarks and cultural heritage on our guided trails."/>
+  <meta property="og:image" content="path-to-image.jpg"/>
+  <meta property="og:url" content="https://example.com/heritage-trails"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <title>
+   Heritage Trails
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+    a:focus {
+      outline: 2px dashed #ffcc00;
+      outline-offset: 4px;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 8px 2px rgba(251, 191, 36, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 16px 4px rgba(251, 191, 36, 1);
+      }
+    }
+    .pulseGlow {
+      animation: pulseGlow 2.5s infinite;
+    }
+    /* Tooltip fade */
+    button:focus + div,
+    button:hover + div {
+      display: block !important;
+      opacity: 1 !important;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+ </head>
+ <body class="bg-amber-50 text-amber-900">
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+   <img alt="A breathtaking ancient historical site with stone ruins bathed in warm sunset light, surrounded by lush greenery and a clear sky" class="absolute inset-0 w-full h-full object-cover brightness-75" height="1080" loading="eager" src="https://storage.googleapis.com/a1aa/image/ff8b68e2-b8bf-4c20-a0ee-d0732e13b709.jpg" width="1920"/>
+   <div class="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center max-w-4xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 drop-shadow-lg fadeInUp" style="animation-delay: 0.3s;">
+     Discover the Stories of Our Past!
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl drop-shadow-md fadeInUp" style="animation-delay: 0.6s;">
+     Embark on unforgettable journeys through time and culture, where every step tells a story.
+    </p>
+    <a class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold text-lg px-8 py-4 rounded shadow-lg transition pulseGlow fadeInUp focus:outline-none focus:ring-2 focus:ring-amber-500" href="#featured-tours" style="animation-delay: 0.9s;">
+     Start Your Adventure
+    </a>
+   </div>
+  </section>
+  <!-- Featured Tours -->
+  <section class="py-16 px-6 max-w-7xl mx-auto bg-amber-100 rounded-t-3xl shadow-lg" id="featured-tours">
+   <h2 class="text-3xl font-bold text-center mb-12 fadeInUp" style="animation-delay: 0.2s;">
+    Featured Tours
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.3s;">
+     <img alt="Tour image showing the Egyptian pyramids with camels walking in the desert under a bright blue sky" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b7005717-dced-4954-a59b-a422cdfb12ba.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Egyptian Pyramids Adventure
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Journey through the timeless sands of Egypt, uncovering the secrets of the pyramids, ancient temples, and vibrant local culture on this immersive 7-day expedition.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.4s;">
+     <img alt="Tour image showing the Roman Colosseum with a guided group of tourists exploring the ancient amphitheater" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1cdcf9b2-debe-4255-644b-aedd34a2471f.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Rome Colosseum &amp; Ancient City
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Step into the grandeur of ancient Rome, exploring iconic landmarks, legendary gladiator arenas, and the vibrant history that shaped Western civilization.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.5s;">
+     <img alt="Tour image showing the Great Wall of China winding over green mountains under a clear sky" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8e6f3f02-fdce-4d45-ef90-85e956d1841c.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Great Wall of China Expedition
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Traverse the legendary Great Wall, marvel at breathtaking vistas, and delve into the stories of ancient dynasties that built this monumental wonder.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.6s;">
+     <img alt="Tour image showing the Incan ruins of Machu Picchu surrounded by clouds and green mountains" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ad461ac4-5f18-4f11-eb5a-2919c44bffd8.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Machu Picchu Heritage Trek
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Discover the mystical Incan citadel nestled in the Andes, surrounded by lush mountains and rich history on this unforgettable guided trek.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.7s;">
+     <img alt="Tour image showing the Angkor Wat temple complex at sunrise with golden light illuminating the ancient stone structures" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cee894a9-14dd-4d90-c1ba-83ca12952541.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Angkor Wat Sunrise Experience
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Experience the magic of dawn at Angkor Wat, exploring the grandeur of Khmer architecture and the spiritual heart of Cambodia.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.8s;">
+     <img alt="Tour image showing a medieval Scottish castle perched on a hill with green fields and cloudy skies" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3278ea15-b9f3-43f2-aa94-13c40db36b76.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-amber-900">
+       Medieval Castles of Scotland
+      </h3>
+      <p class="text-amber-800 flex-grow leading-relaxed">
+       Explore the rugged beauty and rich legends of Scotland’s medieval castles, steeped in history and breathtaking landscapes.
+      </p>
+      <a class="mt-4 inline-block text-amber-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Cultural Insights -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+   <h2 class="text-3xl font-bold text-center mb-12 fadeInUp" style="animation-delay: 0.2s;">
+    Cultural Insights
+   </h2>
+   <div class="space-y-16 max-w-5xl mx-auto">
+    <article class="flex flex-col md:flex-row items-center md:items-start gap-8 fadeInUp" style="animation-delay: 0.3s;">
+     <img alt="Colorful infographic illustrating key aspects of ancient Egyptian culture including hieroglyphics, gods, and daily life" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a0c666b2-ad57-4d72-e6ea-8c67dcae27c3.jpg" width="400"/>
+     <div class="md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4 text-amber-900">
+       The Legacy of Ancient Egypt
+      </h3>
+      <p class="mb-4 text-amber-900 leading-relaxed">
+       Dive deep into the wonders of Ancient Egypt — from the enigmatic hieroglyphics and majestic temples to the fascinating mythology that continues to inspire the world.
+      </p>
+      <blockquote class="border-l-4 border-amber-700 pl-4 italic text-amber-700">
+       “Egypt is not just a place, it’s a journey through time.” – Dr. Sarah El-Masry, Egyptologist
+      </blockquote>
+     </div>
+    </article>
+    <article class="flex flex-col md:flex-row items-center md:items-start gap-8 fadeInUp" style="animation-delay: 0.4s;">
+     <img alt="Photo showing a traditional Japanese tea ceremony with a tea master preparing matcha in a serene tatami room" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/94a33da5-48a9-4b96-4a28-9f9c681fe84f.jpg" width="400"/>
+     <div class="md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4 text-amber-900">
+       The Art of the Japanese Tea Ceremony
+      </h3>
+      <p class="mb-4 text-amber-900 leading-relaxed">
+       Discover the serene beauty and profound symbolism behind the Japanese tea ceremony, a ritual that connects history, nature, and mindfulness.
+      </p>
+      <blockquote class="border-l-4 border-amber-700 pl-4 italic text-amber-700">
+       “Every movement in the tea ceremony is a step towards mindfulness.” – Kenji Takahashi, Cultural Guide
+      </blockquote>
+     </div>
+    </article>
+    <article class="flex flex-col md:flex-row items-center md:items-start gap-8 fadeInUp" style="animation-delay: 0.5s;">
+     <img alt="Close-up photo of ancient Mayan glyphs carved into stone and colorful artifacts displayed in a museum" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cc6bc7f1-5d15-4dc9-e0ea-da7c10d07d40.jpg" width="400"/>
+     <div class="md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4 text-amber-900">
+       Unveiling the Mysteries of the Maya
+      </h3>
+      <p class="mb-4 text-amber-900 leading-relaxed">
+       Explore the intricate art, advanced astronomy, and rich mythology of the Maya civilization, and learn about ongoing efforts to preserve their cultural treasures.
+      </p>
+      <blockquote class="border-l-4 border-amber-700 pl-4 italic text-amber-700">
+       “The Maya culture is a window into the ingenuity of ancient peoples.” – Maria Lopez, Archaeologist
+      </blockquote>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Interactive Map -->
+  <section class="py-16 px-6 bg-amber-100 rounded-t-3xl shadow-lg max-w-7xl mx-auto">
+   <h2 class="text-3xl font-bold text-center mb-12 fadeInUp" style="animation-delay: 0.2s;">
+    Explore Our Heritage Map
+   </h2>
+   <div class="relative max-w-5xl mx-auto">
+    <img alt="Interactive world map showing various heritage sites marked with icons representing historical landmarks and tour routes" class="w-full rounded-lg shadow-lg" height="600" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5c338b90-3888-48d8-c398-57df64b2be9a.jpg" width="1000"/>
+    <!-- Markers with tooltips -->
+    <button aria-describedby="tooltip-egypt" class="absolute top-[40%] left-[45%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Egyptian Pyramids Adventure: Explore the ancient pyramids and desert landscapes.')" style="transform: translate(-50%, -50%)" type="button" title="Egyptian Pyramids Adventure">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[38%] left-[45%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-egypt" role="tooltip" style="transform: translate(-50%, -100%)">
+     Egyptian Pyramids Adventure
+    </div>
+    <button aria-describedby="tooltip-rome" class="absolute top-[50%] left-[55%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Rome Colosseum &amp; Ancient City: Walk through the heart of ancient Rome.')" style="transform: translate(-50%, -50%)" type="button" title="Rome Colosseum & Ancient City">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[48%] left-[55%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-rome" role="tooltip" style="transform: translate(-50%, -100%)">
+     Rome Colosseum &amp; Ancient City
+    </div>
+    <button aria-describedby="tooltip-greatwall" class="absolute top-[35%] left-[70%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Great Wall of China Expedition: Trek along the majestic Great Wall.')" style="transform: translate(-50%, -50%)" type="button" title="Great Wall of China Expedition">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[33%] left-[70%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-greatwall" role="tooltip" style="transform: translate(-50%, -100%)">
+     Great Wall of China Expedition
+    </div>
+    <button aria-describedby="tooltip-machu" class="absolute top-[60%] left-[40%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Machu Picchu Heritage Trek: Discover the lost city of the Incas.')" style="transform: translate(-50%, -50%)" type="button" title="Machu Picchu Heritage Trek">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[58%] left-[40%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-machu" role="tooltip" style="transform: translate(-50%, -100%)">
+     Machu Picchu Heritage Trek
+    </div>
+    <button aria-describedby="tooltip-angkor" class="absolute top-[55%] left-[65%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Angkor Wat Sunrise Experience: Witness the stunning sunrise over Angkor Wat.')" style="transform: translate(-50%, -50%)" type="button" title="Angkor Wat Sunrise Experience">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[53%] left-[65%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-angkor" role="tooltip" style="transform: translate(-50%, -100%)">
+     Angkor Wat Sunrise Experience
+    </div>
+    <button aria-describedby="tooltip-scotland" class="absolute top-[45%] left-[30%] bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 pulseGlow" onclick="alert('Medieval Castles of Scotland: Journey through historic castles and legends.')" style="transform: translate(-50%, -50%)" type="button" title="Medieval Castles of Scotland">
+     <i class="fas fa-landmark text-lg"></i>
+    </button>
+    <div class="hidden absolute top-[43%] left-[30%] bg-amber-700 text-white text-sm rounded px-2 py-1 pointer-events-none" id="tooltip-scotland" role="tooltip" style="transform: translate(-50%, -100%)">
+     Medieval Castles of Scotland
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+   <h2 class="text-3xl font-bold text-center mb-12 fadeInUp" style="animation-delay: 0.2s;">
+    What Our Travelers Say
+   </h2>
+   <div aria-label="Testimonials from past travelers" class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <figure class="bg-amber-100 rounded-xl p-6 shadow-lg flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.3s;">
+     <img alt="Portrait of a smiling woman traveler wearing a sun hat in front of ancient ruins" class="w-24 h-24 rounded-full object-cover mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d118961d-b33a-46fa-279f-f9b681d1c2f0.jpg" width="100"/>
+     <blockquote class="text-amber-900 italic mb-4 leading-relaxed">
+      “The Egyptian Pyramids Adventure was a life-changing experience. The guides were incredibly knowledgeable, and every moment was filled with awe and wonder.”
+     </blockquote>
+     <figcaption class="font-semibold text-amber-700">
+      Emily R., USA
+     </figcaption>
+    </figure>
+    <figure class="bg-amber-100 rounded-xl p-6 shadow-lg flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.4s;">
+     <img alt="Portrait of a man traveler wearing glasses and a backpack smiling in front of the Roman Colosseum" class="w-24 h-24 rounded-full object-cover mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bc84b088-96b0-4a22-e9a3-a0fd9fbd9953.jpg" width="100"/>
+     <blockquote class="text-amber-900 italic mb-4 leading-relaxed">
+      “Walking through ancient Rome felt like stepping back in time. The stories shared by our guide brought history to life in a way I never imagined.”
+     </blockquote>
+     <figcaption class="font-semibold text-amber-700">
+      James K., UK
+     </figcaption>
+    </figure>
+    <figure class="bg-amber-100 rounded-xl p-6 shadow-lg flex flex-col items-center text-center transform transition hover:scale-105 hover:shadow-2xl fadeInUp" style="animation-delay: 0.5s;">
+     <img alt="Portrait of a woman traveler wearing a scarf and sunglasses smiling with mountains in the background" class="w-24 h-24 rounded-full object-cover mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/88dfad4d-955e-4bec-18d1-1becc3c32889.jpg" width="100"/>
+     <blockquote class="text-amber-900 italic mb-4 leading-relaxed">
+      “The Machu Picchu Heritage Trek challenged me physically and spiritually. The breathtaking views and rich history made it an unforgettable journey.”
+     </blockquote>
+     <figcaption class="font-semibold text-amber-700">
+      Sophia L., Canada
+     </figcaption>
+    </figure>
+   </div>
+  </section>
+  <!-- Newsletter Signup -->
+  <section class="py-16 px-6 bg-amber-100 rounded-t-3xl shadow-lg max-w-4xl mx-auto">
+   <h2 class="text-3xl font-bold text-center mb-6 fadeInUp" style="animation-delay: 0.2s;">
+    Subscribe to Our Newsletter
+   </h2>
+   <p class="text-center text-amber-900 mb-8 max-w-xl mx-auto leading-relaxed">
+    Join thousands of heritage enthusiasts! Receive exclusive discounts, expert travel tips, and inspiring stories from around the world’s most treasured cultural sites.
+   </p>
+   <form action="#" aria-label="Newsletter signup form" class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto" method="POST">
+    <label class="sr-only" for="email">
+     Email address
+    </label>
+    <input class="w-full sm:flex-grow px-4 py-3 rounded border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-700 transition" id="email" name="email" placeholder="Enter your email" required="" type="email" aria-required="true"/>
+    <button class="bg-amber-700 hover:bg-amber-800 text-white font-semibold px-6 py-3 rounded shadow transition w-full sm:w-auto pulseGlow" type="submit">
+     Subscribe
+    </button>
+   </form>
+  </section>
+  <!-- Social Media Integration -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+   <h2 class="text-3xl font-bold text-center mb-12 fadeInUp" style="animation-delay: 0.2s;">
+    Join Our Community
+   </h2>
+   <div class="flex flex-col items-center gap-8 max-w-5xl mx-auto">
+    <div class="flex space-x-8 text-amber-700 text-3xl">
+     <a aria-label="Facebook" class="hover:text-amber-900 transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-square"></i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-amber-900 transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.twitter.com" rel="noopener noreferrer" target="_blank" title="Twitter">
+      <i class="fab fa-twitter-square"></i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-amber-900 transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+      <i class="fab fa-instagram-square"></i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-amber-900 transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.youtube.com" rel="noopener noreferrer" target="_blank" title="YouTube">
+      <i class="fab fa-youtube-square"></i>
+     </a>
+    </div>
+    <div aria-label="User-generated content from travelers" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-5xl">
+     <img alt="Traveler photo showing a group of people smiling in front of a famous heritage site with ancient stone architecture" class="rounded-lg object-cover w-full h-48 sm:h-40 transform transition hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-amber-500" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/62223081-d00d-48b1-b8a7-2e764527d73c.jpg" width="300"/>
+     <img alt="Traveler photo showing a person exploring ancient ruins with lush greenery around" class="rounded-lg object-cover w-full h-48 sm:h-40 transform transition hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-amber-500" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f192bc53-1957-4494-98b4-c47e8eb0c54e.jpg" width="300"/>
+     <img alt="Traveler photo capturing a beautiful sunset at a historical landmark with silhouettes of old buildings" class="rounded-lg object-cover w-full h-48 sm:h-40 transform transition hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-amber-500" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/27129f3c-9ef4-4afe-65e8-da07978c97dc.jpg" width="300"/>
+     <img alt="Traveler photo showing a traditional cultural festival with colorful costumes and dancing" class="rounded-lg object-cover w-full h-48 sm:h-40 transform transition hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-amber-500" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c1adebee-fcae-4914-96e5-df2eb96dc52c.jpg" width="300"/>
+    </div>
+    <p class="text-center text-amber-900 max-w-xl leading-relaxed">
+     Share your experiences with us on social media and tag
+     <strong>
+      #HeritageTrails
+     </strong>
+     to be featured!
+    </p>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-amber-700 text-amber-100 py-12 px-6 mt-16">
+   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+    <div class="max-w-md text-center md:text-left">
+     <h3 class="text-2xl font-bold mb-4">
+      Heritage Trails
+     </h3>
+     <p class="leading-relaxed">
+      Our mission is to inspire and connect travelers with the rich stories and cultures of the world’s heritage sites through immersive, authentic tours that create lasting memories.
+     </p>
+    </div>
+    <nav aria-label="Footer navigation" class="flex flex-col sm:flex-row gap-6 text-amber-200 font-semibold text-lg">
+     <a class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+      About Us
+     </a>
+     <a class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+      Contact
+     </a>
+     <a class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="#">
+      Privacy Policy
+     </a>
+    </nav>
+    <div class="flex space-x-6 text-amber-200 text-2xl">
+     <a aria-label="Facebook" class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-square"></i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.twitter.com" rel="noopener noreferrer" target="_blank" title="Twitter">
+      <i class="fab fa-twitter-square"></i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+      <i class="fab fa-instagram-square"></i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500" href="https://www.youtube.com" rel="noopener noreferrer" target="_blank" title="YouTube">
+      <i class="fab fa-youtube-square"></i>
+     </a>
+    </div>
+   </div>
+   <a href="index.html" class="block text-center text-amber-200 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-amber-500 mt-4">
+    Back to Home
+   </a>
+   <p class="text-center text-amber-200 mt-8 text-sm select-none">
+    © 2024 Heritage Trails. All rights reserved.
+   </p>
+  </footer>
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-4 right-4 bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+    Back to Top
+  </button>
+
+  <!-- Save to Favorites Feature -->
+  <script>
+    const favoriteButtons = document.querySelectorAll('#featured-tours article a');
+
+    favoriteButtons.forEach((button) => {
+      const saveButton = document.createElement('button');
+      saveButton.textContent = 'Save to Favorites';
+      saveButton.className = 'mt-2 bg-amber-700 hover:bg-amber-800 text-white font-semibold py-1 px-3 rounded-md shadow-md transition';
+      saveButton.onclick = () => alert('Tour saved to your favorites!');
+      button.parentElement.appendChild(saveButton);
+    });
+  </script>
+
+  <!-- Enhanced Tooltips for Interactive Map -->
+  <script>
+    const mapMarkers = document.querySelectorAll('[aria-describedby]');
+
+    mapMarkers.forEach((marker) => {
+      marker.addEventListener('mouseover', () => {
+        const tooltipId = marker.getAttribute('aria-describedby');
+        const tooltip = document.getElementById(tooltipId);
+        tooltip.style.display = 'block';
+        tooltip.style.opacity = '1';
+      });
+
+      marker.addEventListener('mouseout', () => {
+        const tooltipId = marker.getAttribute('aria-describedby');
+        const tooltip = document.getElementById(tooltipId);
+        tooltip.style.display = 'none';
+        tooltip.style.opacity = '0';
+      });
+    });
+  </script>
+ </body>
+</html>

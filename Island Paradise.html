@@ -1,0 +1,516 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Island Paradise
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 0.8s;
+      animation-timing-function: ease-out;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Staggered animation delays */
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+    .delay-600 {
+      animation-delay: 0.6s;
+    }
+    .delay-700 {
+      animation-delay: 0.7s;
+    }
+    .delay-800 {
+      animation-delay: 0.8s;
+    }
+    /* Button hover scale */
+    .btn-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-cyan-100 to-blue-200 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="text-2xl font-semibold text-teal-700 hover:text-teal-900 transition duration-300" href="#home" aria-label="Island Paradise Home">
+     Island Paradise
+    </a>
+    <ul class="hidden md:flex space-x-10 text-teal-700 font-semibold tracking-wide">
+     <li>
+      <a class="hover:text-teal-900 transition duration-300" href="#home" tabindex="0">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-teal-900 transition duration-300" href="#destinations" tabindex="0">
+       Destinations
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-teal-900 transition duration-300" href="#activities" tabindex="0">
+       Activities
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-teal-900 transition duration-300" href="#gallery" tabindex="0">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-teal-900 transition duration-300" href="#contact" tabindex="0">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 rounded" id="menu-btn" type="button">
+     <i class="fas fa-bars fa-lg"></i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-white shadow-md" id="mobile-menu" role="menu" aria-label="Mobile menu">
+    <ul class="flex flex-col space-y-3 px-6 py-4 text-teal-700 font-semibold tracking-wide">
+     <li>
+      <a class="block hover:text-teal-900 transition duration-300" href="#home" role="menuitem" tabindex="-1">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-teal-900 transition duration-300" href="#destinations" role="menuitem" tabindex="-1">
+       Destinations
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-teal-900 transition duration-300" href="#activities" role="menuitem" tabindex="-1">
+       Activities
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-teal-900 transition duration-300" href="#gallery" role="menuitem" tabindex="-1">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-teal-900 transition duration-300" href="#contact" role="menuitem" tabindex="-1">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="flex-grow container mx-auto px-6 py-12 space-y-28">
+   <section class="text-center max-w-4xl mx-auto fade-in" id="home" style="animation-delay: 0.1s;">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-teal-900 mb-6 leading-tight drop-shadow-md">
+     Showcase Exotic Island Vacations<br/>with Crystal Clear Waters and Adventure Activities
+    </h1>
+    <p class="text-teal-800 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+     Discover your perfect getaway with breathtaking beaches, vibrant coral reefs, and thrilling island adventures.
+    </p>
+    <a href="#destinations" class="inline-block mt-10 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:from-teal-700 hover:to-cyan-600 focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale" aria-label="Explore Destinations">
+     Explore Destinations
+    </a>
+   </section>
+   <section aria-label="Island vacation destinations" class="space-y-12" id="destinations">
+    <h2 class="text-4xl font-bold text-teal-900 mb-10 text-center fade-in" style="animation-delay: 0.2s;">
+     Destinations
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-100" style="animation-delay: 0.3s;">
+      <img alt="Turquoise beach with tall palm trees swaying gently under a clear blue sky, white sand shore and calm crystal clear water" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6c75a9e1-ee6d-47b0-fcb1-27a34ff75966.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Turquoise Beach
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Relax on the pristine white sands and swim in the calm, crystal-clear turquoise waters.
+       </p>
+       <button aria-label="Learn more about Turquoise Beach" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-200" style="animation-delay: 0.4s;">
+      <img alt="Adventure kayaking in a calm island lagoon surrounded by lush green mountains and bright blue sky" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/76f8b442-157e-4d14-db15-561792504bbf.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Island Lagoon Kayaking
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Paddle through serene lagoons surrounded by lush greenery and discover hidden coves.
+       </p>
+       <button aria-label="Learn more about Island Lagoon Kayaking" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-300" style="animation-delay: 0.5s;">
+      <img alt="Snorkeling over vibrant colorful coral reefs teeming with tropical fish in crystal clear water" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b4bb5d91-8aad-4cd3-e181-5c5e6a48d15c.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Coral Reef Snorkeling
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Explore underwater worlds filled with vibrant coral reefs and exotic marine life.
+       </p>
+       <button aria-label="Learn more about Coral Reef Snorkeling" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-400" style="animation-delay: 0.6s;">
+      <img alt="Sunset view from an island cliff overlooking the ocean with orange and pink sky hues" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/895732ea-0a6b-4db3-31d6-c4d293b4f2bf.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Cliffside Sunset
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Witness breathtaking sunsets from high cliffs with panoramic ocean views.
+       </p>
+       <button aria-label="Learn more about Cliffside Sunset" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-500" style="animation-delay: 0.7s;">
+      <img alt="Jungle hiking trail surrounded by dense tropical plants with sunlight filtering through the leaves" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/69eb19f2-79a0-45ce-c6c7-b6fd21694bb2.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Jungle Hiking
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Trek through lush tropical jungles and discover exotic flora and fauna.
+       </p>
+       <button aria-label="Learn more about Jungle Hiking" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-600" style="animation-delay: 0.8s;">
+      <img alt="Luxury beachfront resort featuring an infinity pool overlooking the ocean with palm trees and clear sky" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/91f88539-ffe9-49c4-929d-c353f525141a.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Luxury Beachfront Resort
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Stay in world-class resorts with stunning ocean views and premium amenities.
+       </p>
+       <button aria-label="Learn more about Luxury Beachfront Resort" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section aria-label="Island adventure activities" class="space-y-12" id="activities">
+    <h2 class="text-4xl font-bold text-teal-900 mb-10 text-center fade-in" style="animation-delay: 0.9s;">
+     Activities
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-100" style="animation-delay: 1.0s;">
+      <img alt="Scuba diver exploring a vibrant coral reef with tropical fish and clear blue water" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ea966f76-8d2f-499d-0c61-5160995af802.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Scuba Diving
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Dive deep into the ocean to explore colorful reefs and marine life.
+       </p>
+       <button aria-label="Learn more about Scuba Diving" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-200" style="animation-delay: 1.1s;">
+      <img alt="People ziplining through a tropical forest canopy with bright sunlight and green trees" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/29d15ad7-8f48-4ace-ec09-f6cb30b6562c.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Ziplining
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Experience the thrill of flying through lush tropical canopies.
+       </p>
+       <button aria-label="Learn more about Ziplining" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-300" style="animation-delay: 1.2s;">
+      <img alt="Group of people paddleboarding on calm ocean water with a clear blue sky" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5dee5eb4-71bf-4736-a641-29f338ab2286.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Paddleboarding
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Glide across calm waters and enjoy scenic island views.
+       </p>
+       <button aria-label="Learn more about Paddleboarding" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-400" style="animation-delay: 1.3s;">
+      <img alt="People hiking on a rocky island trail with tropical plants and blue sky" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8df1610b-0c6c-4cc9-4d6a-1b564c09167d.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Island Hiking
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Explore scenic trails and discover hidden island gems.
+       </p>
+       <button aria-label="Learn more about Island Hiking" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-500" style="animation-delay: 1.4s;">
+      <img alt="People enjoying a beach bonfire at night with stars and ocean in the background" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3d03be0a-6c79-496e-f16a-cdd0d1a7309f.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Beach Bonfire
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Relax and socialize around a warm bonfire under the stars.
+       </p>
+       <button aria-label="Learn more about Beach Bonfire" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col transform hover:scale-105 transition duration-500 fade-in delay-600" style="animation-delay: 1.5s;">
+      <img alt="Couple enjoying a romantic dinner on the beach with tiki torches and sunset" class="w-full h-56 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2727fa55-dbb2-4d1b-f044-4a50ece41eb5.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-teal-900 mb-3 drop-shadow-sm">
+        Romantic Beach Dinner
+       </h3>
+       <p class="text-teal-700 flex-grow leading-relaxed">
+        Enjoy a private candlelit dinner on the beach with ocean views.
+       </p>
+       <button aria-label="Learn more about Romantic Beach Dinner" class="mt-6 self-start bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale">
+        Learn More
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section aria-label="Island vacation gallery" class="space-y-12" id="gallery">
+    <h2 class="text-4xl font-bold text-teal-900 mb-10 text-center fade-in" style="animation-delay: 1.6s;">
+     Gallery
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+     <img alt="Aerial view of a tropical island with turquoise water and white sandy beaches" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/66223b8c-c358-495e-395a-67a02d47ea2a.jpg" style="animation-delay: 1.7s;" width="400" height="300"/>
+     <img alt="Close-up of colorful tropical fish swimming near coral reef" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7cd23318-2025-4703-144f-41ffe0527425.jpg" style="animation-delay: 1.8s;" width="400" height="300"/>
+     <img alt="Sunset over a calm ocean with silhouetted palm trees" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fdeff17a-bf28-4595-45ac-f5f4919d6216.jpg" style="animation-delay: 1.9s;" width="400" height="300"/>
+     <img alt="Couple walking hand in hand on a white sandy beach with clear blue water" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bd90a451-0363-4a38-33f7-0d8c2f02faae.jpg" style="animation-delay: 2.0s;" width="400" height="300"/>
+     <img alt="Kayaker paddling through a calm lagoon surrounded by lush green mountains" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-500" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8c6d2287-eb3c-48e7-0ae4-dda7a33ec9e2.jpg" style="animation-delay: 2.1s;" width="400" height="300"/>
+     <img alt="Tropical flowers in vibrant colors blooming on an island" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-600" loading="lazy" src="https://storage.googleapis.com/a1aa/image/960d375e-779d-4d68-1019-4b9b4aa28704.jpg" style="animation-delay: 2.2s;" width="400" height="300"/>
+     <img alt="People snorkeling over a coral reef with bright tropical fish" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-700" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f0acdde2-725c-4496-1536-5fa6f89c1d83.jpg" style="animation-delay: 2.3s;" width="400" height="300"/>
+     <img alt="Luxury beachfront resort with infinity pool and palm trees" class="rounded-3xl shadow-lg object-cover w-full h-48 cursor-pointer transform hover:scale-105 transition duration-300 fade-in delay-800" loading="lazy" src="https://storage.googleapis.com/a1aa/image/febdcc4d-9b7c-45f5-88ac-7e083909f984.jpg" style="animation-delay: 2.4s;" width="400" height="300"/>
+    </div>
+   </section>
+   <section aria-label="Contact form" class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-10 fade-in" id="contact" style="animation-delay: 2.5s;">
+    <h2 class="text-4xl font-bold text-teal-900 mb-8 text-center">
+     Contact
+    </h2>
+    <form action="#" class="space-y-8" method="POST" novalidate>
+     <div>
+      <label class="block text-teal-900 font-semibold mb-3 text-lg" for="name">
+       Name
+      </label>
+      <input aria-required="true" aria-describedby="name-error" class="w-full border border-teal-300 rounded-xl px-5 py-3 text-teal-900 placeholder-teal-400 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:border-cyan-500 transition" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+      <p class="text-red-600 mt-1 text-sm hidden" id="name-error">Please enter your name.</p>
+     </div>
+     <div>
+      <label class="block text-teal-900 font-semibold mb-3 text-lg" for="email">
+       Email
+      </label>
+      <input aria-required="true" aria-describedby="email-error" class="w-full border border-teal-300 rounded-xl px-5 py-3 text-teal-900 placeholder-teal-400 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:border-cyan-500 transition" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+      <p class="text-red-600 mt-1 text-sm hidden" id="email-error">Please enter a valid email address.</p>
+     </div>
+     <div>
+      <label class="block text-teal-900 font-semibold mb-3 text-lg" for="message">
+       Message
+      </label>
+      <textarea aria-required="true" aria-describedby="message-error" class="w-full border border-teal-300 rounded-xl px-5 py-3 text-teal-900 placeholder-teal-400 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:border-cyan-500 transition resize-none" id="message" name="message" placeholder="Write your message here" required="" rows="6"></textarea>
+      <p class="text-red-600 mt-1 text-sm hidden" id="message-error">Please enter a message.</p>
+     </div>
+     <button aria-label="Send message" class="bg-gradient-to-r from-teal-600 to-cyan-500 hover:from-teal-700 hover:to-cyan-600 text-white font-semibold py-4 px-10 rounded-full shadow-lg w-full focus:outline-none focus:ring-4 focus:ring-cyan-300 transition btn-scale" type="submit">
+      Send Message
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-teal-700 text-teal-100 py-8 mt-20">
+   <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-sm md:text-base select-none">
+     © 2024 Island Paradise. All rights reserved.
+    </p>
+    <div class="flex space-x-8 mt-6 md:mt-0">
+     <a aria-label="Facebook" class="hover:text-white transition duration-300" href="#" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook fa-lg"></i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition duration-300" href="#" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-twitter fa-lg"></i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition duration-300" href="#" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram fa-lg"></i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-white transition duration-300" href="#" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube fa-lg"></i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-4 right-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+    Back to Top
+  </button>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+      menuBtn.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Simple form validation
+    const form = document.querySelector('form');
+    const nameInput = form.querySelector('#name');
+    const emailInput = form.querySelector('#email');
+    const messageInput = form.querySelector('#message');
+    const nameError = form.querySelector('#name-error');
+    const emailError = form.querySelector('#email-error');
+    const messageError = form.querySelector('#message-error');
+
+    form.addEventListener('submit', (e) => {
+      let valid = true;
+
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden');
+        valid = false;
+      } else {
+        nameError.classList.add('hidden');
+      }
+
+      if (!emailInput.value.trim() || !emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        emailError.classList.remove('hidden');
+        valid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+
+      if (!messageInput.value.trim()) {
+        messageError.classList.remove('hidden');
+        valid = false;
+      } else {
+        messageError.classList.add('hidden');
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+
+    // Animate fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.style.animationPlayState = 'running';
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      fader.style.animationPlayState = 'paused';
+      appearOnScroll.observe(fader);
+    });
+
+    // Save to Favorites Feature
+    const destinationCards = document.querySelectorAll('#destinations article, #activities article');
+
+    destinationCards.forEach((card) => {
+      const saveButton = document.createElement('button');
+      saveButton.textContent = 'Save to Favorites';
+      saveButton.className = 'mt-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition';
+      saveButton.onclick = () => alert('Saved to your favorites!');
+      card.querySelector('.p-8').appendChild(saveButton);
+    });
+
+    // Lightbox for Gallery
+    const galleryImages = document.querySelectorAll('#gallery img');
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.style.position = 'fixed';
+    lightbox.style.top = '0';
+    lightbox.style.left = '0';
+    lightbox.style.width = '100%';
+    lightbox.style.height = '100%';
+    lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    lightbox.style.display = 'none';
+    lightbox.style.justifyContent = 'center';
+    lightbox.style.alignItems = 'center';
+    lightbox.style.zIndex = '1000';
+    document.body.appendChild(lightbox);
+
+    galleryImages.forEach((image) => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.style.maxWidth = '90%';
+        img.style.maxHeight = '90%';
+        while (lightbox.firstChild) {
+          lightbox.removeChild(lightbox.firstChild);
+        }
+        lightbox.appendChild(img);
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,660 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="description" content="Celebrate vibrant festivals around the world with our curated tours."/>
+  <meta name="keywords" content="festivals, cultural celebrations, global tours"/>
+  <meta property="og:title" content="Festival Vibes"/>
+  <meta property="og:description" content="Celebrate vibrant festivals around the world with our curated tours."/>
+  <meta property="og:image" content="path-to-image.jpg"/>
+  <meta property="og:url" content="https://example.com/festival-vibes"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <title>
+   Festival Vibes
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    a:focus {
+      outline: 2px dashed #ffcc00;
+      outline-offset: 4px;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 text-gray-900">
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+   <img alt="A vibrant festival scene with a colorful crowd dancing and traditional decorations under bright sunlight" class="absolute inset-0 w-full h-full object-cover brightness-75" height="1080" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9990a31e-830d-4034-3ec1-22b83002f86d.jpg" width="1920"/>
+   <div class="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center text-white max-w-5xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold drop-shadow-lg leading-tight">
+     Experience the World’s Most Colorful Festivals!
+    </h1>
+    <p class="mt-4 text-lg sm:text-xl md:text-2xl font-semibold drop-shadow-md max-w-3xl">
+     Join us in celebrating traditions that unite us all.
+    </p>
+    <a class="mt-8 inline-block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-600 hover:via-red-600 hover:to-yellow-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500" href="#festival-highlights">
+     Explore Festivals
+    </a>
+   </div>
+  </section>
+  <!-- Festival Countdown Section -->
+  <section class="bg-pink-50 py-16 px-6">
+   <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold text-pink-700 mb-6">
+     Next Festival Countdown
+    </h2>
+    <p class="text-gray-700 mb-4">
+     Get ready for the upcoming festival!
+    </p>
+    <div id="countdown" class="text-4xl font-bold text-pink-600">
+    </div>
+   </div>
+  </section>
+  <script>
+   // Countdown Timer Script
+   const nextFestivalDate = new Date('2025-02-09T00:00:00'); // Example date for Rio Carnival
+   const countdownElement = document.getElementById('countdown');
+
+   function updateCountdown() {
+     const now = new Date();
+     const timeLeft = nextFestivalDate - now;
+
+     if (timeLeft <= 0) {
+       countdownElement.textContent = 'The festival is happening now!';
+       return;
+     }
+
+     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+     countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+   }
+
+   setInterval(updateCountdown, 1000);
+  </script>
+  <!-- Festival Highlights -->
+  <section class="max-w-7xl mx-auto px-6 py-16 sm:py-20" id="festival-highlights">
+   <h2 class="text-3xl font-extrabold text-center text-pink-600 mb-12">
+    Festival Highlights
+   </h2>
+   <div aria-label="Featured festivals" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="Rio Carnival parade with colorful costumes and samba dancers performing on the street" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b267b50b-2db0-4618-7620-7b8785ddd593.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       Rio Carnival, Brazil
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       The world’s biggest carnival featuring samba parades, vibrant
+            costumes, and nonstop music.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="Diwali festival of lights with colorful lanterns hanging and fireworks lighting up the night sky" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd76ecda-b864-41a6-1a12-11cda0b01282.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       Diwali, India
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       The festival of lights celebrating the victory of light over
+            darkness with lamps, fireworks, and family gatherings.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="Oktoberfest beer tents with people wearing traditional Bavarian clothing enjoying beer and music" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4428525f-6db8-4ba8-bf63-30dd357dc669.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       Oktoberfest, Germany
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       The world’s largest beer festival with traditional music, food,
+            and Bavarian culture.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="Chinese New Year dragon dance with performers in colorful costumes and red lanterns hanging" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0e360d5f-4c7e-4840-8dee-f17cb35da546.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       Chinese New Year, China
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       A vibrant celebration featuring dragon dances, fireworks, and
+            family reunions to welcome the lunar new year.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="La Tomatina tomato fight festival in Spain with people throwing ripe tomatoes in a lively street" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8c16ce9f-cb8e-43be-aa0b-3dbe4e390e50.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       La Tomatina, Spain
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       The world’s biggest tomato fight festival where participants throw
+            tomatoes in a fun and messy celebration.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+     <img alt="Holi festival of colors with people joyfully throwing vibrant colored powder in the air outdoors" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/08b62909-d069-4048-1f57-7734a1512da3.jpg" width="600"/>
+     <div class="p-6 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-pink-700 mb-2">
+       Holi, India
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       The joyous festival of colors celebrating the arrival of spring
+            with music, dance, and colorful powders.
+      </p>
+      <a class="mt-4 inline-block text-pink-600 font-semibold hover:underline self-start" href="#">
+       Learn More →
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Cultural Insights -->
+  <section class="bg-pink-50 py-16 px-6">
+   <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-extrabold text-pink-700 text-center mb-12">
+     Cultural Insights
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+     <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+      <img alt="Close-up of a traditional African festival mask with intricate colorful patterns and textures" class="w-full h-48 object-cover" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/22635e1e-6f5f-4d43-5a92-66213d448249.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-700 mb-3">
+        The Meaning Behind Festival Masks
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Festival masks symbolize ancestral spirits and cultural identity,
+              playing a vital role in ceremonies and storytelling.
+       </p>
+       <blockquote class="mt-4 italic text-pink-600 font-semibold border-l-4 border-pink-300 pl-4">
+        “Wearing the mask connects me to my roots and the stories of my
+              people.” – A festival elder
+       </blockquote>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+      <img alt="Traditional Japanese lantern festival at night with glowing red and white lanterns hanging in rows" class="w-full h-48 object-cover" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a1aba04c-62d8-4191-2269-c967de7bc0d5.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-700 mb-3">
+        Lantern Festivals: Light and Hope
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Lantern festivals symbolize hope and renewal, illuminating the
+              night sky with wishes and prayers.
+       </p>
+       <blockquote class="mt-4 italic text-pink-600 font-semibold border-l-4 border-pink-300 pl-4">
+        “Each lantern carries a dream, lighting the path to a brighter
+              future.” – Cultural expert
+       </blockquote>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col" tabindex="0">
+      <img alt="Traditional Mexican dancers wearing colorful costumes performing folkloric dance outdoors" class="w-full h-48 object-cover" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d5dde007-36aa-44c6-5c99-82151fce2f1c.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-700 mb-3">
+        Dance as Cultural Expression
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Dance is a powerful way to express cultural stories, emotions,
+              and community spirit during festivals.
+       </p>
+       <blockquote class="mt-4 italic text-pink-600 font-semibold border-l-4 border-pink-300 pl-4">
+        “Through dance, we celebrate our heritage and pass it to the
+              next generation.” – Festival dancer
+       </blockquote>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <!-- Event Calendar -->
+  <section class="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+   <h2 class="text-3xl font-extrabold text-pink-600 text-center mb-12">
+    Upcoming Festivals Calendar
+   </h2>
+   <div class="flex flex-col md:flex-row md:space-x-8">
+    <aside aria-label="Filter festivals" class="md:w-1/4 bg-pink-50 rounded-xl p-6 mb-8 md:mb-0 shadow-lg">
+     <h3 class="text-xl font-semibold text-pink-700 mb-4">
+      Filter By
+     </h3>
+     <form class="space-y-6" id="filter-form">
+      <div>
+       <label class="block mb-2 font-semibold text-pink-700" for="region">
+        Region
+       </label>
+       <select class="w-full rounded-md border border-pink-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="region" name="region">
+        <option value="">
+         All Regions
+        </option>
+        <option value="Americas">
+         Americas
+        </option>
+        <option value="Asia">
+         Asia
+        </option>
+        <option value="Europe">
+         Europe
+        </option>
+        <option value="Africa">
+         Africa
+        </option>
+        <option value="Oceania">
+         Oceania
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold text-pink-700" for="type">
+        Festival Type
+       </label>
+       <select class="w-full rounded-md border border-pink-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="type" name="type">
+        <option value="">
+         All Types
+        </option>
+        <option value="Music">
+         Music
+        </option>
+        <option value="Food">
+         Food
+        </option>
+        <option value="Religious">
+         Religious
+        </option>
+        <option value="Cultural">
+         Cultural
+        </option>
+        <option value="Seasonal">
+         Seasonal
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold text-pink-700" for="date">
+        Date
+       </label>
+       <input class="w-full rounded-md border border-pink-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="date" name="date" type="date"/>
+      </div>
+      <button class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 rounded-md transition" type="submit">
+       Apply Filters
+      </button>
+     </form>
+    </aside>
+    <div class="md:w-3/4 overflow-x-auto shadow-lg rounded-xl bg-white p-6">
+     <table aria-label="Upcoming festivals" class="w-full table-auto border-collapse text-left">
+      <thead>
+       <tr class="bg-pink-100 text-pink-700">
+        <th class="py-3 px-4 border-b border-pink-200">
+         Festival
+        </th>
+        <th class="py-3 px-4 border-b border-pink-200">
+         Region
+        </th>
+        <th class="py-3 px-4 border-b border-pink-200">
+         Type
+        </th>
+        <th class="py-3 px-4 border-b border-pink-200">
+         Date
+        </th>
+        <th class="py-3 px-4 border-b border-pink-200">
+         Location
+        </th>
+       </tr>
+      </thead>
+      <tbody class="text-gray-800" id="festival-table-body">
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         Rio Carnival
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Americas
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Cultural
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Feb 9 - Feb 14
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Rio de Janeiro, Brazil
+        </td>
+       </tr>
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         Diwali
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Asia
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Religious
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Nov 1 - Nov 5
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         India
+        </td>
+       </tr>
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         Oktoberfest
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Europe
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Food
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Sep 17 - Oct 3
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Munich, Germany
+        </td>
+       </tr>
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         Chinese New Year
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Asia
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Cultural
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Jan 21 - Jan 27
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         China
+        </td>
+       </tr>
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         La Tomatina
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Europe
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Cultural
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Aug 28
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Buñol, Spain
+        </td>
+       </tr>
+       <tr class="hover:bg-pink-50 focus:bg-pink-100" tabindex="0">
+        <td class="py-3 px-4 border-b border-pink-200 font-semibold">
+         Holi
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Asia
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Cultural
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         Mar 8 - Mar 9
+        </td>
+        <td class="py-3 px-4 border-b border-pink-200">
+         India
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </section>
+  <script>
+   const festivalTableBody = document.getElementById('festival-table-body');
+   const rows = festivalTableBody.querySelectorAll('tr');
+
+   rows.forEach((row) => {
+     const saveButton = document.createElement('button');
+     saveButton.textContent = 'Save to Calendar';
+     saveButton.className = 'ml-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-1 px-3 rounded-md shadow-md transition';
+     saveButton.onclick = () => alert('Event saved to your calendar!');
+     row.lastElementChild.appendChild(saveButton);
+   });
+  </script>
+  <!-- User Engagement -->
+  <section class="bg-pink-50 py-16 px-6">
+   <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-extrabold text-pink-700 text-center mb-12">
+     Share Your Festival Moments
+    </h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-10">
+     Join our community by sharing your photos and stories from festivals
+        around the world. Tag us on social media with
+     <span class="font-semibold text-pink-600">
+      #FestivalVibes
+     </span>
+     to get
+        featured!
+    </p>
+    <div aria-label="User shared festival photos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo showing a colorful festival parade with a large crowd dancing and waving flags" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9c8f532d-d353-459d-08f3-f088667d0187.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “The energy at the parade was unforgettable!” – Maria G.
+      </figcaption>
+     </figure>
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo of traditional dancers in colorful costumes performing on stage during a festival" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7cc44375-442a-4b12-7d06-8e3ad48e7d6e.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “Loved the traditional dances and costumes!” – James L.
+      </figcaption>
+     </figure>
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo of festival food stalls with colorful decorations and people enjoying street food" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/110da175-9cd0-4546-f5fa-d231948bc977.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “The food was amazing and the atmosphere so lively!” – Aisha K.
+      </figcaption>
+     </figure>
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo of a night festival with glowing lanterns and colorful fireworks lighting up the sky" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4ff69361-9f31-4774-4c08-a6e7c211bea3.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “Magical night with lanterns and fireworks!” – Chen W.
+      </figcaption>
+     </figure>
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo of a festival crowd joyfully throwing vibrant colored powder in the air outdoors" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eba3896f-501e-4e82-d6c6-34615e76f851.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “Holi colors brought so much joy!” – Priya S.
+      </figcaption>
+     </figure>
+     <figure class="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400" tabindex="0">
+      <img alt="User photo of a lively music performance on stage during a festival with colorful lights and audience" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a071135d-e073-49ea-0645-05e861ad6b54.jpg" width="600"/>
+      <figcaption class="p-4 text-gray-700 text-sm">
+       “The live music made the festival unforgettable!” – Lucas M.
+      </figcaption>
+     </figure>
+    </div>
+   </div>
+  </section>
+  <!-- Newsletter Signup -->
+  <section class="max-w-4xl mx-auto px-6 py-16 sm:py-20 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 rounded-xl shadow-lg text-white">
+   <h2 class="text-3xl font-extrabold text-center mb-6">
+    Stay Updated with Festival Vibes
+   </h2>
+   <p class="text-center mb-8 max-w-2xl mx-auto">
+    Subscribe to our newsletter for exclusive content, early access to
+      tickets, and the latest festival news from around the world.
+   </p>
+   <form aria-label="Newsletter signup form" class="flex flex-col sm:flex-row items-center max-w-3xl mx-auto gap-4">
+    <label class="sr-only" for="email">
+     Email address
+    </label>
+    <input class="w-full sm:flex-1 rounded-md p-3 text-gray-900 font-semibold focus:outline-none focus:ring-4 focus:ring-pink-300" id="email" name="email" placeholder="Enter your email address" required aria-required="true" type="email"/>
+    <button class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-300 text-pink-700 font-bold py-3 px-8 rounded-md shadow-lg transition" type="submit">
+     Subscribe
+    </button>
+   </form>
+  </section>
+  <!-- Social Media Integration -->
+  <section class="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+   <h2 class="text-3xl font-extrabold text-pink-600 text-center mb-12">
+    Connect with Us
+   </h2>
+   <div class="flex flex-col items-center space-y-8">
+    <div class="flex space-x-8 text-pink-600 text-3xl">
+     <a aria-label="Facebook" class="hover:text-pink-800 transition" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-facebook-square">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-pink-800 transition" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-twitter-square">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-pink-800 transition" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-pink-800 transition" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-youtube-square">
+      </i>
+     </a>
+    </div>
+    <div aria-label="Live social media feed" class="w-full max-w-4xl bg-pink-50 rounded-xl shadow-lg p-6 overflow-y-auto max-h-96">
+     <article class="mb-6 border-b border-pink-200 pb-4">
+      <p class="text-gray-800">
+       <span class="font-semibold text-pink-600">
+        @FestivalVibes
+       </span>
+       :
+            Just experienced the most amazing Holi festival! Colors and joy
+            everywhere! #FestivalVibes #Holi2024
+      </p>
+      <time class="text-sm text-pink-400 block mt-1" datetime="2024-03-09">
+       March 9, 2024
+      </time>
+     </article>
+     <article class="mb-6 border-b border-pink-200 pb-4">
+      <p class="text-gray-800">
+       <span class="font-semibold text-pink-600">
+        @CultureExplorer
+       </span>
+       :
+            The Rio Carnival parade was a breathtaking experience! Samba beats
+            and vibrant costumes! #RioCarnival #FestivalVibes
+      </p>
+      <time class="text-sm text-pink-400 block mt-1" datetime="2024-02-12">
+       February 12, 2024
+      </time>
+     </article>
+     <article class="mb-6 border-b border-pink-200 pb-4">
+      <p class="text-gray-800">
+       <span class="font-semibold text-pink-600">
+        @TravelWithMe
+       </span>
+       :
+            Can’t wait for Oktoberfest this year! Prost to good times and great
+            beer! #Oktoberfest #FestivalVibes
+      </p>
+      <time class="text-sm text-pink-400 block mt-1" datetime="2024-09-18">
+       September 18, 2024
+      </time>
+     </article>
+     <article class="mb-6 border-b border-pink-200 pb-4">
+      <p class="text-gray-800">
+       <span class="font-semibold text-pink-600">
+        @FoodieFest
+       </span>
+       :
+            Sampling delicious street food at La Tomatina was a messy but
+            tasty adventure! #LaTomatina #FestivalVibes
+      </p>
+      <time class="text-sm text-pink-400 block mt-1" datetime="2024-08-28">
+       August 28, 2024
+      </time>
+     </article>
+    </div>
+   </div>
+  </section>
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-4 right-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+   Back to Top
+  </button>
+  <!-- Footer -->
+  <footer class="bg-pink-700 text-pink-100 py-12 px-6">
+   <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
+    <div class="max-w-md text-center md:text-left">
+     <h3 class="text-2xl font-extrabold mb-4">
+      Festival Vibes
+     </h3>
+     <p class="text-pink-200">
+      Bringing the world’s cultural festivals to your fingertips. Celebrate
+          diversity, unity, and joy through traditions that connect us all.
+     </p>
+    </div>
+    <nav aria-label="Footer navigation" class="flex flex-col sm:flex-row justify-center md:justify-end space-y-4 sm:space-y-0 sm:space-x-8 text-pink-200 font-semibold">
+     <a class="hover:text-white transition focus:outline-none focus:underline" href="#">
+      About Us
+     </a>
+     <a class="hover:text-white transition focus:outline-none focus:underline" href="#">
+      Contact
+     </a>
+     <a class="hover:text-white transition focus:outline-none focus:underline" href="#">
+      Privacy Policy
+     </a>
+    </nav>
+    <div class="flex space-x-6 justify-center md:justify-end text-2xl">
+     <a aria-label="Facebook" class="hover:text-white transition" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-facebook-square">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-twitter-square">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-white transition" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-youtube-square">
+      </i>
+     </a>
+    </div>
+   </div>
+   <a href="index.html" class="block text-center text-pink-200 font-semibold mt-8 hover:text-white transition">
+    Back to Home
+   </a>
+  </footer>
+ </body>
+</html>

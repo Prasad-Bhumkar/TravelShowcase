@@ -1,0 +1,465 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Sunset Shores - Beach Resort
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Fade-in and slide-up animation */
+    .fade-slide-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-slide-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Staggered animation delay */
+    .fade-slide-up.delay-100 {
+      transition-delay: 0.1s;
+    }
+    .fade-slide-up.delay-200 {
+      transition-delay: 0.2s;
+    }
+    .fade-slide-up.delay-300 {
+      transition-delay: 0.3s;
+    }
+    .fade-slide-up.delay-400 {
+      transition-delay: 0.4s;
+    }
+    .fade-slide-up.delay-500 {
+      transition-delay: 0.5s;
+    }
+    /* Button hover scale */
+    .btn-animate:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    /* Nav link underline animation */
+    nav a span {
+      transition: width 0.3s ease;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-orange-100 via-pink-100 to-purple-200 min-h-screen flex flex-col">
+  <header class="bg-white bg-opacity-80 backdrop-blur-md shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3 fade-slide-up delay-100">
+     <img alt="Logo with stylized letters S and S in warm sunset colors, circular shape with gradient orange and pink" class="w-14 h-14 rounded-full object-cover shadow-md" height="56" src="https://storage.googleapis.com/a1aa/image/1682ea76-eb62-4627-f891-e2a335e2b523.jpg" width="56"/>
+     <h1 class="text-4xl font-bold text-orange-600 select-none tracking-wide drop-shadow-md">
+      Sunset Shores
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-10 text-orange-700 font-semibold tracking-wide fade-slide-up delay-200">
+     <a href="#home" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Home
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+     <a href="#rooms" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Rooms
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+     <a href="#amenities" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Amenities
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+     <a href="#dining" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Dining
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+     <a href="#gallery" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Gallery
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+     <a href="#contact" class="hover:text-orange-900 transition duration-300 ease-in-out relative group">
+      Contact
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-orange-700 transition-all duration-300"></span>
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 fade-slide-up delay-300" id="menu-btn">
+     <i class="fas fa-bars fa-lg"></i>
+    </button>
+   </div>
+   <nav class="md:hidden bg-white bg-opacity-90 backdrop-blur-md shadow-inner hidden flex-col space-y-4 px-6 pb-6" id="mobile-menu">
+    <a href="#home" class="block py-3 text-orange-700 font-semibold border-b border-orange-300 hover:bg-orange-50 rounded transition">
+     Home
+    </a>
+    <a href="#rooms" class="block py-3 text-orange-700 font-semibold border-b border-orange-300 hover:bg-orange-50 rounded transition">
+     Rooms
+    </a>
+    <a href="#amenities" class="block py-3 text-orange-700 font-semibold border-b border-orange-300 hover:bg-orange-50 rounded transition">
+     Amenities
+    </a>
+    <a href="#dining" class="block py-3 text-orange-700 font-semibold border-b border-orange-300 hover:bg-orange-50 rounded transition">
+     Dining
+    </a>
+    <a href="#gallery" class="block py-3 text-orange-700 font-semibold border-b border-orange-300 hover:bg-orange-50 rounded transition">
+     Gallery
+    </a>
+    <a href="#contact" class="block py-3 text-orange-700 font-semibold hover:bg-orange-50 rounded transition">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow">
+   <!-- Home Section -->
+   <section id="home" class="relative">
+    <img alt="A breathtaking sunset over a calm beach with gentle waves and silhouetted palm trees against a vibrant orange, pink, and purple sky" class="w-full h-80 sm:h-[480px] md:h-[600px] object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/e5f1580b-0ae4-4724-a863-78c60d2790a0.jpg" width="1920"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end p-8 sm:p-16">
+     <h2 class="text-white text-5xl sm:text-6xl font-bold drop-shadow-xl max-w-4xl leading-tight mb-6 fade-slide-up visible" style="transition-delay: 0.2s;">
+      Welcome to Sunset Shores
+     </h2>
+     <p class="text-orange-200 text-lg sm:text-xl max-w-3xl drop-shadow-md fade-slide-up visible" style="transition-delay: 0.4s;">
+      Your perfect beach resort getaway with stunning sunsets, luxurious amenities, and unforgettable experiences.
+     </p>
+     <div class="mt-8 fade-slide-up visible" style="transition-delay: 0.6s;">
+      <a href="#rooms" class="inline-block bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+       Explore Rooms
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- Rooms Section -->
+   <section id="rooms" class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold text-orange-700 mb-12 text-center tracking-wide drop-shadow-md fade-slide-up">
+     Our Rooms
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-100">
+      <img alt="Luxury beachfront resort room with large windows showing an ocean view, modern decor, and a king-sized bed with white linens" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/0af27062-004b-4fdd-bc69-31b8588a079e.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        Ocean View Suite
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Spacious suite with floor-to-ceiling windows offering panoramic ocean views, king-sized bed, and private balcony.
+       </p>
+       <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>King-sized bed with premium linens</li>
+        <li>Private balcony with ocean view</li>
+        <li>Modern bathroom with rain shower</li>
+        <li>Complimentary Wi-Fi and smart TV</li>
+       </ul>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        Book Now
+       </button>
+      </div>
+     </article>
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-200">
+      <img alt="Cozy deluxe room with tropical decor, large windows, and a queen-sized bed with white linens" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/522aaf69-4a4e-44db-6bc0-a4887c3a055e.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        Deluxe Room
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Comfortable room with tropical decor, queen-sized bed, and garden or pool views.
+       </p>
+       <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Queen-sized bed with plush linens</li>
+        <li>Garden or pool view</li>
+        <li>Ensuite bathroom with bathtub</li>
+        <li>Free Wi-Fi and cable TV</li>
+       </ul>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        Book Now
+       </button>
+      </div>
+     </article>
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-300">
+      <img alt="Cozy standard room with warm lighting, twin beds, and tropical decor" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/9c17685f-070c-46aa-57bb-8cce6d535f3e.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        Standard Room
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Cozy room with twin beds, tropical accents, and all essential amenities for a comfortable stay.
+       </p>
+       <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Twin beds with quality linens</li>
+        <li>Air conditioning and fan</li>
+        <li>Ensuite bathroom with shower</li>
+        <li>Complimentary Wi-Fi</li>
+       </ul>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        Book Now
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Amenities Section -->
+   <section id="amenities" class="bg-white bg-opacity-90 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-orange-700 mb-12 text-center tracking-wide drop-shadow-md fade-slide-up">
+      Amenities
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-100">
+       <i class="fas fa-swimming-pool text-6xl text-orange-500 mb-6 animate-bounce"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        Infinity Pool
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Enjoy our stunning infinity pool with panoramic ocean views and poolside service.
+       </p>
+      </div>
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-200">
+       <i class="fas fa-spa text-6xl text-orange-500 mb-6 animate-pulse"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        Spa & Wellness
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Relax with massages, facials, and wellness treatments in our serene spa.
+       </p>
+      </div>
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-300">
+       <i class="fas fa-dumbbell text-6xl text-orange-500 mb-6 animate-pulse"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        Fitness Center
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Stay active with our fully equipped gym featuring modern machines and personal trainers.
+       </p>
+      </div>
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-400">
+       <i class="fas fa-wifi text-6xl text-orange-500 mb-6 animate-pulse"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        Free Wi-Fi
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Stay connected with high-speed internet available throughout the resort.
+       </p>
+      </div>
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-500">
+       <i class="fas fa-concierge-bell text-6xl text-orange-500 mb-6 animate-bounce"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        24/7 Concierge
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Our concierge team is available around the clock to assist with your needs.
+       </p>
+      </div>
+      <div class="flex flex-col items-center text-center p-6 bg-orange-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 fade-slide-up delay-600">
+       <i class="fas fa-shuttle-van text-6xl text-orange-500 mb-6 animate-bounce"></i>
+       <h3 class="text-2xl font-semibold text-orange-700 mb-3">
+        Airport Shuttle
+       </h3>
+       <p class="text-gray-700 text-lg leading-relaxed">
+        Convenient shuttle service to and from the airport for a hassle-free arrival.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Dining Section -->
+   <section id="dining" class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold text-orange-700 mb-12 text-center tracking-wide drop-shadow-md fade-slide-up">
+     Dining Experiences
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-100">
+      <img alt="Gourmet beachside dining experience with tables set on sand, candles, and a sunset sky in the background" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/8905f889-7a52-4397-681c-4d3055d19199.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        Beachside Grill
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Enjoy fresh seafood and grilled specialties with your toes in the sand and a sunset view.
+       </p>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        View Menu
+       </button>
+      </div>
+     </article>
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-200">
+      <img alt="Elegant indoor dining room with tropical decor, wooden tables, and warm lighting" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/81f9ecdf-a0e3-4fc2-2766-f786bde6591e.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        The Sunset Room
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Fine dining with a curated menu of international and local dishes in an elegant setting.
+       </p>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        View Menu
+       </button>
+      </div>
+     </article>
+     <article class="bg-white bg-opacity-90 rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:scale-[1.05] transition-transform duration-300 fade-slide-up delay-300">
+      <img alt="Casual poolside bar with colorful cocktails and lounge seating" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/8389d114-09a8-4214-d436-fd14ce407f70.jpg" width="600"/>
+      <div class="p-8 flex flex-col flex-grow">
+       <h3 class="text-3xl font-semibold text-orange-700 mb-4 tracking-wide">
+        Poolside Bar
+       </h3>
+       <p class="text-gray-800 flex-grow text-lg leading-relaxed">
+        Refreshing cocktails, light bites, and a relaxed atmosphere by the pool.
+       </p>
+       <button class="mt-8 self-start bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate">
+        View Menu
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Gallery Section -->
+   <section id="gallery" class="bg-white bg-opacity-90 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-orange-700 mb-12 text-center tracking-wide drop-shadow-md fade-slide-up">
+      Gallery
+     </h2>
+     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+      <img alt="Sunset beach with tall palm trees silhouetted against an orange and pink sky" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-100" height="300" src="https://storage.googleapis.com/a1aa/image/9e7f8cf1-0aee-4131-68bf-5697d04c86bd.jpg" width="400"/>
+      <img alt="Resort lobby with tropical decor, wooden furniture, and large windows letting in natural light" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-150" height="300" src="https://storage.googleapis.com/a1aa/image/88f85185-8294-4ae2-b074-a7f688b13a2e.jpg" width="400"/>
+      <img alt="Couple walking hand in hand on a sandy beach during a vibrant sunset" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-200" height="300" src="https://storage.googleapis.com/a1aa/image/b2abe2f7-d503-4ca2-64bb-cc000088a852.jpg" width="400"/>
+      <img alt="Spa room with ocean view, candles lit, and relaxing ambiance" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-250" height="300" src="https://storage.googleapis.com/a1aa/image/211e23cf-ba3e-44ca-2f25-289ff0b6d8d7.jpg" width="400"/>
+      <img alt="Sunset cocktails served on a beach terrace with lounge chairs and ocean in background" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-300" height="300" src="https://storage.googleapis.com/a1aa/image/fa5cdc1f-65ca-4923-c46e-97cfb4509853.jpg" width="400"/>
+      <img alt="Group yoga session on the beach at sunrise with calm ocean and soft light" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-350" height="300" src="https://storage.googleapis.com/a1aa/image/8b8eeb6f-779a-42c4-c3da-5783874299b9.jpg" width="400"/>
+      <img alt="Boat cruise on the ocean during sunset with passengers enjoying the view" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-400" height="300" src="https://storage.googleapis.com/a1aa/image/e0edb4c1-e927-4c62-3988-fa8872e7f42d.jpg" width="400"/>
+      <img alt="Beach bonfire at night with guests sitting around and starry sky above" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-450" height="300" src="https://storage.googleapis.com/a1aa/image/af93379e-dc05-48f0-0ab8-2679fe18fc93.jpg" width="400"/>
+      <img alt="Deluxe suite balcony overlooking the ocean with comfortable seating and sunset view" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-500" height="300" src="https://storage.googleapis.com/a1aa/image/1d8f13b3-652f-42e3-1096-89e10c5b4eae.jpg" width="400"/>
+      <img alt="Sunset Shores resort wooden sign at entrance with tropical plants and sunset sky" class="rounded-3xl object-cover w-full h-52 shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer fade-slide-up delay-550" height="300" src="https://storage.googleapis.com/a1aa/image/555d26fe-1847-4a62-bf36-67bc0e0f351f.jpg" width="400"/>
+     </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section id="contact" class="bg-white bg-opacity-90 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-orange-700 mb-12 text-center tracking-wide drop-shadow-md fade-slide-up">
+      Contact Us
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <form class="bg-orange-50 rounded-3xl p-8 shadow-lg fade-slide-up delay-100" action="#" method="POST" novalidate>
+       <div class="mb-6">
+        <label class="block text-orange-700 font-semibold mb-2" for="name">
+         Name
+        </label>
+        <input class="w-full rounded-lg border border-orange-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+       </div>
+       <div class="mb-6">
+        <label class="block text-orange-700 font-semibold mb-2" for="email">
+         Email
+        </label>
+        <input class="w-full rounded-lg border border-orange-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+       </div>
+       <div class="mb-6">
+        <label class="block text-orange-700 font-semibold mb-2" for="message">
+         Message
+        </label>
+        <textarea class="w-full rounded-lg border border-orange-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-y min-h-[120px]" id="message" name="message" placeholder="Write your message here..." required=""></textarea>
+       </div>
+       <button class="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-animate" type="submit">
+        Send Message
+       </button>
+      </form>
+      <div class="bg-orange-50 rounded-3xl p-8 shadow-lg flex flex-col justify-center space-y-6 text-orange-800 fade-slide-up delay-200">
+       <div class="flex items-center space-x-4">
+        <i class="fas fa-map-marker-alt text-3xl animate-pulse"></i>
+        <p class="text-lg leading-relaxed">
+         123 Sunset Blvd, Beach City, CA 90210
+        </p>
+       </div>
+       <div class="flex items-center space-x-4">
+        <i class="fas fa-phone-alt text-3xl animate-pulse"></i>
+        <p class="text-lg leading-relaxed">
+         +1 (555) 123-4567
+        </p>
+       </div>
+       <div class="flex items-center space-x-4">
+        <i class="fas fa-envelope text-3xl animate-pulse"></i>
+        <p class="text-lg leading-relaxed">
+         contact@sunsetshores.com
+        </p>
+       </div>
+       <div>
+        <iframe aria-label="Map showing Sunset Shores Resort location" class="w-full rounded-2xl border-0 mt-4 shadow-lg" height="250" loading="lazy" src="https://www.google.com/maps/embed/v1/place?q=123+Sunset+Blvd,+Beach+City,+CA+90210&amp;key=AIzaSyA-YourGoogleMapsAPIKeyHere" style="border:0;" title="Sunset Shores Resort Location" width="100%"></iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-orange-600 via-pink-600 to-purple-700 text-orange-100 py-10">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+    <div class="flex items-center space-x-4 fade-slide-up delay-100">
+     <img alt="Small logo with stylized letters S and S in warm sunset colors, circular shape" class="w-12 h-12 rounded-full object-cover shadow-md" height="48" src="https://storage.googleapis.com/a1aa/image/c47d5a3c-eebd-451d-2d7b-e73d4ad459d0.jpg" width="48"/>
+     <span class="font-semibold text-2xl select-none tracking-wide drop-shadow-md">
+      Sunset Shores
+     </span>
+    </div>
+    <p class="text-center md:text-left text-sm max-w-md leading-relaxed tracking-wide fade-slide-up delay-200">
+     © 2024 Sunset Shores Resort. All rights reserved. Crafted with care to bring you the best beachside experience.
+    </p>
+    <div class="flex space-x-8 text-2xl fade-slide-up delay-300">
+     <a aria-label="Facebook" class="hover:text-pink-300 transition duration-300" href="#">
+      <i class="fab fa-facebook-f"></i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-pink-300 transition duration-300" href="#">
+      <i class="fab fa-twitter"></i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-pink-300 transition duration-300" href="#">
+      <i class="fab fa-instagram"></i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-pink-300 transition duration-300" href="#">
+      <i class="fab fa-linkedin-in"></i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+
+    // Intersection Observer for fade-slide-up animations
+    const faders = document.querySelectorAll('.fade-slide-up');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,380 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Experience the Ultimate Sunset Cruise
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes pulseScale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
+    .pulseScale {
+      animation: pulseScale 3s ease-in-out infinite;
+    }
+    /* Scroll reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-white py-20 px-6 text-center relative overflow-hidden">
+   <h1 class="text-5xl sm:text-6xl font-bold mb-4 fadeInUp" style="animation-delay: 0.2s;">
+    Experience the Ultimate Sunset Cruise
+   </h1>
+   <p class="text-2xl sm:text-3xl font-light max-w-4xl mx-auto fadeInUp" style="animation-delay: 0.5s;">
+    Luxurious Romantic Getaways for Couples
+   </p>
+   <div class="mt-12">
+    <button aria-label="Book Your Romantic Cruise Now" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-4 px-12 rounded-full text-xl shadow-lg transition transform hover:scale-105 pulseScale" style="animation-delay: 0.8s;">
+     Book Your Romantic Cruise Now
+    </button>
+   </div>
+   <img alt="Soft glowing abstract waves of warm sunset colors flowing across the header background" class="pointer-events-none absolute bottom-0 left-0 w-full opacity-30" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dca6d5ce-669e-4c8f-db6f-fb9a6c7d4c94.jpg" width="1920"/>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+   <img alt="A stunning sunset over calm water with a couple sitting close together on a boat, enjoying the vibrant orange and pink sky reflecting on the water" class="w-full h-auto object-cover max-h-[700px] brightness-90 transition-transform duration-700 hover:scale-105" height="700" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6673f6f9-8678-45b4-037f-0ee774fa011e.jpg" width="1920"/>
+   <div aria-hidden="true" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center px-6">
+   </div>
+
+  </section>
+  <!-- Section 1: Introduction -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center scroll-reveal">
+   <h2 class="text-4xl sm:text-5xl font-semibold mb-8">
+    Escape to Romance on the Water
+   </h2>
+   <p class="text-xl sm:text-2xl max-w-4xl mx-auto leading-relaxed mb-10">
+    Discover the magic of our sunset cruises, where luxury meets tranquility. Enjoy an intimate evening as you and your partner sail into the sunset, creating unforgettable memories together.
+   </p>
+   <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-4xl mx-auto">
+    <div class="bg-pink-50 rounded-lg p-6 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+     <img alt="Couple holding hands on a boat deck with sunset in background" class="w-full rounded-md mb-4" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/17e132a1-36fc-42b8-9808-59267553a1e9.jpg" width="400"/>
+     <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+      Intimate Moments
+     </h3>
+     <p class="text-gray-700">
+      Enjoy private moments with your loved one surrounded by breathtaking views.
+     </p>
+    </div>
+    <div class="bg-pink-50 rounded-lg p-6 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+     <img alt="Luxury boat deck with elegant seating and sunset sky" class="w-full rounded-md mb-4" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9650f914-d617-4068-4136-22fcc0d07049.jpg" width="400"/>
+     <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+      Luxury Ambiance
+     </h3>
+     <p class="text-gray-700">
+      Experience plush seating and elegant surroundings designed for your comfort.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Section 2: Luxury Amenities -->
+  <section class="bg-gradient-to-r from-pink-50 to-orange-50 py-20 px-6 scroll-reveal">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl sm:text-5xl font-semibold mb-12 text-center text-pink-700">
+     Indulge in Unmatched Luxury
+    </h2>
+    <ul class="max-w-3xl mx-auto space-y-8 text-xl text-gray-700 list-disc list-inside">
+     <li class="flex items-center gap-4 hover:text-pink-600 transition transform hover:scale-105">
+      <i class="fas fa-couch text-pink-600 text-3xl flex-shrink-0">
+      </i>
+      Elegant, plush seating for ultimate comfort
+     </li>
+     <li class="flex items-center gap-4 hover:text-pink-600 transition transform hover:scale-105">
+      <i class="fas fa-water text-pink-600 text-3xl flex-shrink-0">
+      </i>
+      Panoramic views of breathtaking sunsets
+     </li>
+     <li class="flex items-center gap-4 hover:text-pink-600 transition transform hover:scale-105">
+      <i class="fas fa-wine-glass-alt text-pink-600 text-3xl flex-shrink-0">
+      </i>
+      Fine wines and handcrafted cocktails available onboard
+     </li>
+     <li class="flex items-center gap-4 hover:text-pink-600 transition transform hover:scale-105">
+      <i class="fas fa-utensils text-pink-600 text-3xl flex-shrink-0">
+      </i>
+      Gourmet dining options crafted by top chefs
+     </li>
+     <li class="flex items-center gap-4 hover:text-pink-600 transition transform hover:scale-105">
+      <i class="fas fa-user-friends text-pink-600 text-3xl flex-shrink-0">
+      </i>
+      Personalized service from our attentive crew
+     </li>
+    </ul>
+    <div class="mt-12 flex justify-center gap-8 flex-wrap">
+     <img alt="Elegant plush seating area on a luxury boat with sunset sky" class="rounded-lg shadow-lg w-72 h-48 object-cover hover:scale-105 transition-transform cursor-pointer" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b0640a04-f77d-4f5b-71fd-ae34056c0019.jpg" width="288"/>
+     <img alt="Gourmet plated meal with fresh seafood and colorful garnish" class="rounded-lg shadow-lg w-72 h-48 object-cover hover:scale-105 transition-transform cursor-pointer" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5836d8ba-7e16-4def-9049-a9f138692135.jpg" width="288"/>
+     <img alt="Bartender preparing handcrafted cocktail with sunset background" class="rounded-lg shadow-lg w-72 h-48 object-cover hover:scale-105 transition-transform cursor-pointer" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e1d8b8c7-8b3d-4be3-0cfa-0d1cba6e04bf.jpg" width="288"/>
+    </div>
+   </div>
+  </section>
+  <!-- Section 3: Create Lasting Memories -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center scroll-reveal">
+   <h2 class="text-4xl sm:text-5xl font-semibold mb-8">
+    A Perfect Setting for Love
+   </h2>
+   <p class="text-xl sm:text-2xl max-w-4xl mx-auto leading-relaxed mb-12">
+    Capture the beauty of the moment with stunning photographs or simply enjoy each other’s company as you drift into a world of romance. Our sunset cruises are designed to make your special occasion unforgettable.
+   </p>
+   <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+     <img alt="Couple taking a selfie on a boat with sunset in background" class="w-full h-48 object-cover" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0dba5f59-fb71-428c-637c-ca5f015a9e0b.jpg" width="400"/>
+     <div class="p-6 bg-white">
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Capture the Moment
+      </h3>
+      <p class="text-gray-700">
+       Take stunning photos to remember your romantic evening forever.
+      </p>
+     </div>
+    </div>
+    <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+     <img alt="Couple enjoying quiet moment on boat deck with sunset sky" class="w-full h-48 object-cover" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cc77fddd-1903-4ea0-2db7-793cfb0899c7.jpg" width="400"/>
+     <div class="p-6 bg-white">
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Cherish the Silence
+      </h3>
+      <p class="text-gray-700">
+       Enjoy peaceful moments together away from the world’s distractions.
+      </p>
+     </div>
+    </div>
+    <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+     <img alt="Couple holding hands watching sunset from boat deck" class="w-full h-48 object-cover" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/34711c0f-b3c4-430b-60fd-64b4c95c11a0.jpg" width="400"/>
+     <div class="p-6 bg-white">
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Create Memories
+      </h3>
+      <p class="text-gray-700">
+       Let the sunset be the backdrop for your unforgettable love story.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Section 4: Special Occasions -->
+  <section class="bg-gradient-to-r from-orange-50 to-pink-50 py-20 px-6 scroll-reveal">
+   <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl sm:text-5xl font-semibold mb-8 text-pink-700">
+     Celebrate Your Love
+    </h2>
+    <p class="text-xl sm:text-2xl max-w-4xl mx-auto leading-relaxed mb-12">
+     Whether it’s an anniversary, a proposal, or just a romantic evening out, our sunset cruises provide the perfect backdrop for your celebration. Let us help you create a magical experience.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-10 max-w-4xl mx-auto">
+     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+      <img alt="Couple celebrating anniversary on boat with champagne glasses" class="w-full rounded-md mb-6 object-cover h-48" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/120b29b4-5d8c-4156-77c8-4664c373c309.jpg" width="400"/>
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Anniversaries
+      </h3>
+      <p class="text-gray-700">
+       Mark your special day with an unforgettable cruise experience.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+      <img alt="Man proposing to woman on boat deck at sunset" class="w-full rounded-md mb-6 object-cover h-48" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/49423452-b98b-4eb1-b930-f9f9e1f9496a.jpg" width="400"/>
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Proposals
+      </h3>
+      <p class="text-gray-700">
+       Create the perfect romantic setting to pop the question.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer">
+      <img alt="Couple enjoying romantic dinner on boat deck with sunset" class="w-full rounded-md mb-6 object-cover h-48" height="192" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7975833c-7aaa-47cf-5986-853671b52051.jpg" width="400"/>
+      <h3 class="text-2xl font-semibold mb-2 text-pink-700">
+       Romantic Evenings
+      </h3>
+      <p class="text-gray-700">
+       Spend a magical evening with gourmet dining and stunning views.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Section 5: Testimonials -->
+  <section class="max-w-7xl mx-auto px-6 py-20 scroll-reveal">
+   <h2 class="text-4xl sm:text-5xl font-semibold mb-16 text-center">
+    What Our Guests Are Saying
+   </h2>
+   <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      The sunset cruise was absolutely magical. The atmosphere was so romantic, and the crew made us feel like royalty. A night we will never forget!
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Emily &amp; James
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      From the gourmet dining to the breathtaking views, every detail was perfect. We celebrated our anniversary in style and felt completely pampered.
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Sophia &amp; Liam
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      A truly unforgettable experience. The cocktails were delicious, and the sunset was the most beautiful we’ve ever seen. Highly recommend for couples!
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Olivia &amp; Noah
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      The crew’s attention to detail and the stunning views made our evening perfect. We felt so special and relaxed the entire time.
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Mia &amp; Ethan
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      The perfect romantic escape. The sunset was breathtaking and the onboard service was impeccable. We can’t wait to come back!
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Ava &amp; Lucas
+     </footer>
+    </blockquote>
+    <blockquote class="bg-white shadow-lg rounded-lg p-10 flex flex-col justify-between hover:shadow-2xl transition transform hover:-translate-y-3 cursor-pointer">
+     <p class="text-gray-700 text-lg leading-relaxed mb-8 italic relative before:absolute before:-left-6 before:top-0 before:text-6xl before:text-pink-200 before:content-['“']">
+      Every detail was perfect, from the cocktails to the sunset views. A truly luxurious and romantic experience.
+     </p>
+     <footer class="text-pink-600 font-semibold text-right text-lg">
+      – Isabella &amp; Mason
+     </footer>
+    </blockquote>
+   </div>
+  </section>
+  <!-- Section 6: Call to Action -->
+  <section class="bg-gradient-to-r from-pink-600 to-orange-500 text-white py-24 px-6 text-center relative overflow-hidden">
+   <h2 class="text-5xl sm:text-6xl font-bold mb-8 fadeInUp" style="animation-delay: 0.2s;">
+    Ready to Set Sail?
+   </h2>
+   <p class="text-2xl sm:text-3xl max-w-4xl mx-auto mb-14 leading-relaxed fadeInUp" style="animation-delay: 0.5s;">
+    Don’t miss out on the ultimate romantic getaway. Reserve your sunset cruise today and embark on a journey filled with luxury, romance, and unforgettable memories.
+   </p>
+   <button aria-label="Reserve Your Spot" class="bg-white text-pink-600 font-semibold py-5 px-16 rounded-full text-2xl shadow-lg hover:bg-gray-100 transition transform hover:scale-110 pulseScale" style="animation-delay: 0.8s;">
+    Reserve Your Spot
+   </button>
+   <img alt="Soft glowing abstract waves of warm sunset colors flowing across the call to action background" class="pointer-events-none absolute bottom-0 left-0 w-full opacity-30" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/be4805ea-db06-441b-9ac9-6c59a51b4ca8.jpg" width="1920"/>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-6">
+   <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-8 sm:space-y-0">
+    <nav class="flex flex-wrap justify-center sm:justify-start gap-8 text-sm sm:text-base">
+     <a class="hover:text-white transition" href="#">
+      About Us
+     </a>
+     <a class="hover:text-white transition" href="#">
+      Contact
+     </a>
+     <a class="hover:text-white transition" href="#">
+      FAQs
+     </a>
+     <a class="hover:text-white transition" href="#">
+      Terms &amp; Conditions
+     </a>
+    </nav>
+    <div class="flex space-x-8 text-3xl justify-center sm:justify-end">
+     <a aria-label="Facebook" class="hover:text-white transition transform hover:scale-110" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition transform hover:scale-110" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition transform hover:scale-110" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="max-w-6xl mx-auto mt-10 text-center text-sm sm:text-base text-gray-400 select-text">
+    <p>
+     Phone:
+     <a class="hover:text-white transition" href="tel:+1234567890">
+      +1 (234) 567-890
+     </a>
+     | Email:
+     <a class="hover:text-white transition" href="mailto:info@sunsetcruises.com">
+      info@sunsetcruises.com
+     </a>
+    </p>
+   </div>
+  </footer>
+  <script>
+   // Scroll reveal animation
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+    const displayScrollElement = (element) => {
+      element.classList.add('visible');
+    };
+    const hideScrollElement = (element) => {
+      element.classList.remove('visible');
+    };
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      });
+    };
+    window.addEventListener('scroll', () => {
+      handleScrollAnimation();
+    });
+    // Initial check
+    handleScrollAnimation();
+  </script>
+ </body>
+</html>

@@ -1,0 +1,358 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Rapids Rush - Adventure Travel
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Open Sans", sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-400 to-blue-600 text-white">
+  <!-- Navigation -->
+  <nav class="w-full bg-blue-900 bg-opacity-90 fixed top-0 left-0 z-50 shadow-md">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="text-3xl font-bold tracking-wide hover:text-blue-300 transition" href="#">
+     Rapids Rush
+    </a>
+    <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+     <li>
+      <a class="hover:text-blue-300 transition" href="#adventures">
+       Adventures
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-blue-300 transition" href="#packages">
+       Packages
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-blue-300 transition" href="#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-blue-300 transition" href="#testimonials">
+       Testimonials
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-blue-300 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </button>
+   </div>
+   <div class="hidden md:hidden bg-blue-800 bg-opacity-90" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 px-6 py-4 text-lg font-semibold">
+     <li>
+      <a class="block hover:text-blue-300 transition" href="#adventures">
+       Adventures
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-blue-300 transition" href="#packages">
+       Packages
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-blue-300 transition" href="#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-blue-300 transition" href="#testimonials">
+       Testimonials
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-blue-300 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="pt-24 pb-20 px-6 text-center max-w-5xl mx-auto">
+   <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg">
+    Rapids Rush
+   </h1>
+   <p class="mt-6 text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
+    Perfect for water sports and adrenaline-packed adventure travel packages.
+   </p>
+   <div class="mt-10 flex justify-center space-x-6 flex-wrap">
+    <a class="inline-flex items-center px-8 py-4 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full text-white font-semibold text-lg transition" href="#packages">
+     <i class="fas fa-water mr-3">
+     </i>
+     Book Your Adventure
+    </a>
+    <a class="inline-flex items-center px-8 py-4 border border-white border-opacity-40 rounded-full text-white font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition" href="#adventures">
+     <i class="fas fa-info-circle mr-3">
+     </i>
+     Learn More
+    </a>
+   </div>
+   <div class="mt-12 flex justify-center">
+    <img alt="White water rafting adventure on rapid river with thrill and excitement, people wearing helmets and life jackets paddling through foamy rapids" class="rounded-lg shadow-lg w-full max-w-4xl object-cover" height="450" src="https://storage.googleapis.com/a1aa/image/dcdd28e2-ce9c-452f-3665-377c17e04ef0.jpg" width="800"/>
+   </div>
+  </header>
+  <!-- Adventures Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="adventures">
+   <h2 class="text-4xl font-extrabold text-center mb-12 drop-shadow-md">
+    Our Adventures
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <article class="bg-white bg-opacity-10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:bg-opacity-20 transition">
+     <img alt="Thrilling white water rafting adventure with excited people navigating rapids in a raft wearing helmets and life jackets" class="rounded-lg mb-4 w-full object-cover h-48" height="250" src="https://storage.googleapis.com/a1aa/image/13ad152f-9136-4520-6de8-78bb744d5e3f.jpg" width="400"/>
+     <h3 class="text-2xl font-bold mb-2">
+      White Water Rafting
+     </h3>
+     <p class="text-white text-opacity-90">
+      Experience the rush of navigating roaring rapids with expert guides on thrilling white water rafting trips.
+     </p>
+    </article>
+    <article class="bg-white bg-opacity-10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:bg-opacity-20 transition">
+     <img alt="Kayaking on fast flowing river with mountain scenery and clear blue sky, person paddling in bright kayak" class="rounded-lg mb-4 w-full object-cover h-48" height="250" src="https://storage.googleapis.com/a1aa/image/747103cc-1f9a-4631-c298-9d7d9b279f23.jpg" width="400"/>
+     <h3 class="text-2xl font-bold mb-2">
+      Kayaking
+     </h3>
+     <p class="text-white text-opacity-90">
+      Paddle through scenic rivers and challenging rapids in our guided kayaking adventures for all skill levels.
+     </p>
+    </article>
+    <article class="bg-white bg-opacity-10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:bg-opacity-20 transition">
+     <img alt="Canyoning down waterfalls and rock slides in mountain terrain, adventurers wearing helmets and wetsuits" class="rounded-lg mb-4 w-full object-cover h-48" height="250" src="https://storage.googleapis.com/a1aa/image/cc8a8601-3042-4de4-d84d-5f441367f74e.jpg" width="400"/>
+     <h3 class="text-2xl font-bold mb-2">
+      Canyoning
+     </h3>
+     <p class="text-white text-opacity-90">
+      Descend waterfalls, jump into crystal pools, and explore hidden canyons on our adrenaline-pumping canyoning tours.
+     </p>
+    </article>
+   </div>
+  </section>
+  <!-- Packages Section -->
+  <section class="bg-blue-900 bg-opacity-80 py-20 px-6" id="packages">
+   <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold mb-12 drop-shadow-md">
+     Adventure Packages
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+     <div class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg hover:bg-opacity-20 transition flex flex-col">
+      <h3 class="text-3xl font-bold mb-4">
+       Rush Starter
+      </h3>
+      <p class="text-white text-opacity-90 flex-grow mb-6">
+       Perfect for beginners, includes a half-day white water rafting trip with expert guides.
+      </p>
+      <div class="text-2xl font-extrabold mb-6">
+       $199
+      </div>
+      <a class="mt-auto inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition" href="#book">
+       Book Now
+      </a>
+     </div>
+     <div class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg hover:bg-opacity-20 transition flex flex-col">
+      <h3 class="text-3xl font-bold mb-4">
+       Adrenaline Pack
+      </h3>
+      <p class="text-white text-opacity-90 flex-grow mb-6">
+       A full day of kayaking and canyoning adventures for thrill seekers.
+      </p>
+      <div class="text-2xl font-extrabold mb-6">
+       $349
+      </div>
+      <a class="mt-auto inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition" href="#book">
+       Book Now
+      </a>
+     </div>
+     <div class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg hover:bg-opacity-20 transition flex flex-col">
+      <h3 class="text-3xl font-bold mb-4">
+       Ultimate Rapids Rush
+      </h3>
+      <p class="text-white text-opacity-90 flex-grow mb-6">
+       Three-day adventure package combining rafting, kayaking, and canyoning with accommodation.
+      </p>
+      <div class="text-2xl font-extrabold mb-6">
+       $799
+      </div>
+      <a class="mt-auto inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition" href="#book">
+       Book Now
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Gallery Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="gallery">
+   <h2 class="text-4xl font-extrabold text-center mb-12 drop-shadow-md">
+    Gallery
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <img alt="Group rafting on white water rapids with mountain background, people paddling in raft wearing helmets and life jackets" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/ed884773-dda7-428e-99d9-a72404e6cc01.jpg" width="400"/>
+    <img alt="Kayaker paddling through clear river with sunlight reflection on water, surrounded by lush green trees" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/a747dae8-889e-427c-848a-e72f54c9d66f.jpg" width="400"/>
+    <img alt="Canyoning adventurers jumping into blue pool from rock ledge, wearing helmets and wetsuits, sunny day" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/572f8dc1-acc7-4b17-c2c4-f3ef83966873.jpg" width="400"/>
+    <img alt="Close-up of rafting paddle cutting through foamy white water rapids, water splashing around" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/d5407c7d-ea76-415e-3563-7c3de50a6bd5.jpg" width="400"/>
+    <img alt="Sunset view of river with rafting boats floating near shore, mountains in background with orange sky" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/ce794cee-f5ff-4a32-c257-d0863bd76c69.jpg" width="400"/>
+    <img alt="Group of adventurers posing with helmets and life jackets near riverbank smiling and ready for adventure" class="rounded-lg shadow-lg object-cover w-full h-72" height="300" src="https://storage.googleapis.com/a1aa/image/56270873-e918-4ded-ca46-5a25c919efff.jpg" width="400"/>
+   </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="bg-blue-900 bg-opacity-80 py-20 px-6" id="testimonials">
+   <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold mb-12 drop-shadow-md">
+     What Our Adventurers Say
+    </h2>
+    <div class="space-y-12">
+     <blockquote class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg max-w-3xl mx-auto">
+      <p class="text-lg italic mb-6 text-white text-opacity-90">
+       "Rapids Rush gave me the most exhilarating experience of my life! The guides were professional and the rapids were incredible. Highly recommend!"
+      </p>
+      <footer class="text-white font-bold">
+       – Sarah M.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg max-w-3xl mx-auto">
+      <p class="text-lg italic mb-6 text-white text-opacity-90">
+       "The Ultimate Rapids Rush package was worth every penny. Three days of nonstop adventure, beautiful scenery, and great company."
+      </p>
+      <footer class="text-white font-bold">
+       – James T.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white bg-opacity-10 rounded-xl p-8 shadow-lg max-w-3xl mx-auto">
+      <p class="text-lg italic mb-6 text-white text-opacity-90">
+       "I was a bit nervous about canyoning but the guides made me feel safe and it was so much fun! Can't wait to come back."
+      </p>
+      <footer class="text-white font-bold">
+       – Emily R.
+      </footer>
+     </blockquote>
+    </div>
+   </div>
+  </section>
+  <!-- Booking Section -->
+  <section class="max-w-3xl mx-auto px-6 py-20" id="book">
+   <h2 class="text-4xl font-extrabold text-center mb-12 drop-shadow-md">
+    Book Your Adventure
+   </h2>
+   <form action="#" class="bg-white rounded-xl p-8 shadow-lg" method="POST">
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="name">
+      Full Name
+     </label>
+     <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="email">
+      Email Address
+     </label>
+     <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="package">
+      Select Package
+     </label>
+     <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" id="package" name="package" required="">
+      <option disabled="" selected="" value="">
+       Select a package
+      </option>
+      <option value="rush-starter">
+       Rush Starter - $199
+      </option>
+      <option value="adrenaline-pack">
+       Adrenaline Pack - $349
+      </option>
+      <option value="ultimate-rapids-rush">
+       Ultimate Rapids Rush - $799
+      </option>
+     </select>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="date">
+      Preferred Date
+     </label>
+     <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" id="date" name="date" required="" type="date"/>
+    </div>
+    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition" type="submit">
+     Submit Booking
+    </button>
+   </form>
+  </section>
+  <!-- Contact Section -->
+  <section class="bg-blue-900 bg-opacity-80 py-20 px-6" id="contact">
+   <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold mb-12 drop-shadow-md">
+     Contact Us
+    </h2>
+    <p class="mb-6 text-white text-opacity-90 max-w-3xl mx-auto">
+     Have questions or want to customize your adventure? Reach out to us!
+    </p>
+    <div class="flex flex-col md:flex-row md:justify-center md:space-x-12 space-y-6 md:space-y-0 max-w-4xl mx-auto">
+     <div class="flex items-center justify-center space-x-4">
+      <i class="fas fa-phone-alt text-3xl text-blue-400">
+      </i>
+      <a class="text-white text-lg font-semibold hover:text-blue-300 transition" href="tel:+1234567890">
+       +1 (234) 567-890
+      </a>
+     </div>
+     <div class="flex items-center justify-center space-x-4">
+      <i class="fas fa-envelope text-3xl text-blue-400">
+      </i>
+      <a class="text-white text-lg font-semibold hover:text-blue-300 transition" href="mailto:info@rapidsrush.com">
+       info@rapidsrush.com
+      </a>
+     </div>
+     <div class="flex items-center justify-center space-x-4">
+      <i class="fas fa-map-marker-alt text-3xl text-blue-400">
+      </i>
+      <address class="not-italic text-white text-lg font-semibold">
+       123 Adventure Lane, River City, USA
+      </address>
+     </div>
+    </div>
+    <div class="mt-12 flex justify-center space-x-8 text-2xl">
+     <a aria-label="Facebook" class="hover:text-blue-400 transition" href="https://facebook.com" rel="noopener" target="_blank">
+      <i class="fab fa-facebook-square">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-blue-400 transition" href="https://twitter.com" rel="noopener" target="_blank">
+      <i class="fab fa-twitter-square">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-blue-400 transition" href="https://instagram.com" rel="noopener" target="_blank">
+      <i class="fab fa-instagram-square">
+      </i>
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-blue-900 bg-opacity-90 py-6 text-center text-white text-sm">
+   © 2024 Rapids Rush. All rights reserved.
+  </footer>
+  <script>
+   const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+ </body>
+</html>

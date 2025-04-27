@@ -1,0 +1,406 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="description" content="Discover serene forest trails and reconnect with nature on our guided tours."/>
+  <meta name="keywords" content="forest trails, nature tours, hiking"/>
+  <meta property="og:title" content="Forest Trails"/>
+  <meta property="og:description" content="Discover serene forest trails and reconnect with nature on our guided tours."/>
+  <meta property="og:image" content="path-to-image.jpg"/>
+  <meta property="og:url" content="https://example.com/forest-trails"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <title>
+   Forest Trails
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f0fdf4;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    a:focus {
+      outline: 2px dashed #ffcc00;
+      outline-offset: 4px;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+    @keyframes pulseScale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
+    .pulseScale {
+      animation: pulseScale 3s ease-in-out infinite;
+    }
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col">
+  <header class="bg-gradient-to-r from-green-800 via-green-900 to-green-800 text-white shadow-lg sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <div class="flex items-center space-x-3">
+     <img alt="Logo with a stylized green pine tree icon with a mountain silhouette behind" class="h-10 w-10 pulseScale" height="80" src="https://storage.googleapis.com/a1aa/image/06c29ff8-13bc-49a4-3f43-e228d3ffe170.jpg" width="80"/>
+     <h1 class="text-2xl font-bold tracking-wide select-none">
+      Forest Trails
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-10 font-semibold text-green-200">
+     <a class="hover:text-white transition duration-300 ease-in-out relative group" href="#">
+      Home
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300">
+      </span>
+     </a>
+     <a class="hover:text-white transition duration-300 ease-in-out relative group" href="#tours">
+      Tours
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300">
+      </span>
+     </a>
+     <a class="hover:text-white transition duration-300 ease-in-out relative group" href="#gallery">
+      Gallery
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300">
+      </span>
+     </a>
+     <a class="hover:text-white transition duration-300 ease-in-out relative group" href="#about">
+      About
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300">
+      </span>
+     </a>
+     <a class="hover:text-white transition duration-300 ease-in-out relative group" href="#contact">
+      Contact
+      <span class="absolute left-0 -bottom-1 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300">
+      </span>
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-green-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav class="md:hidden bg-green-700 text-green-200 space-y-1 px-4 pb-4 hidden" id="mobile-menu">
+    <a class="block py-2 hover:text-white font-semibold border-b border-green-600" href="#">
+     Home
+    </a>
+    <a class="block py-2 hover:text-white font-semibold border-b border-green-600" href="#tours">
+     Tours
+    </a>
+    <a class="block py-2 hover:text-white font-semibold border-b border-green-600" href="#gallery">
+     Gallery
+    </a>
+    <a class="block py-2 hover:text-white font-semibold border-b border-green-600" href="#about">
+     About
+    </a>
+    <a class="block py-2 hover:text-white font-semibold" href="#contact">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+   <!-- Hero Section -->
+   <section class="relative bg-green-900 rounded-3xl overflow-hidden shadow-2xl mb-20">
+    <img alt="A panoramic view of a dense forest with sun rays piercing through tall pine trees and a winding trail" class="w-full h-96 object-cover brightness-75" height="384" loading="lazy" src="https://storage.googleapis.com/a1aa/image/68421b0a-112d-4290-f71a-5721fc7578f2.jpg" width="1200"/>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 sm:px-12">
+     <h2 class="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg mb-4 fadeInUp" style="animation-delay: 0.3s;">
+      Discover Your Next Adventure
+     </h2>
+     <p class="text-green-200 text-lg sm:text-xl max-w-3xl mb-8 fadeInUp" style="animation-delay: 0.6s;">
+      Immerse yourself in nature with our expertly guided hiking tours through breathtaking forest trails.
+     </p>
+     <a class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 fadeInUp focus:outline-none focus:ring-2 focus:ring-green-500" href="#tours" style="animation-delay: 0.9s;">
+      Explore Tours
+     </a>
+    </div>
+   </section>
+   <!-- Trail Difficulty Filter -->
+   <section class="mb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h2 class="text-4xl font-bold text-green-900 mb-6 text-center">Filter Trails by Difficulty</h2>
+     <div class="flex justify-center">
+      <select id="difficulty-filter" class="border border-green-300 rounded-lg px-4 py-2 text-green-900 focus:outline-none focus:ring-2 focus:ring-green-500">
+       <option value="">All Difficulties</option>
+       <option value="easy">Easy</option>
+       <option value="moderate">Moderate</option>
+       <option value="hard">Hard</option>
+      </select>
+     </div>
+    </div>
+   </section>
+   <!-- Tours Section -->
+   <section class="mb-20" id="tours">
+    <h2 class="text-4xl font-bold text-green-900 mb-10 text-center fadeInUp" style="animation-delay: 0.2s;">
+     Featured Hiking Tours
+    </h2>
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.3s;" data-difficulty="moderate">
+      <img alt="Mountain trail with hikers walking during a vibrant orange sunset with pine trees on both sides" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/be43efc6-de77-4d38-bd5c-9befb54880e1.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        Sunset Mountain Trail
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Experience breathtaking views as you hike through the mountain trails at sunset, surrounded by towering pines and vibrant skies.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.4s;" data-difficulty="easy">
+      <img alt="Forest path with sunlight filtering through dense green leaves and tall trees" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/93bfffb6-34c0-4396-29e6-bc6779fd219b.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        Sunlit Forest Path
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Wander through peaceful forest paths illuminated by warm sunlight filtering through lush green leaves.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.5s;" data-difficulty="hard">
+      <img alt="River trail with clear flowing water over rocks surrounded by lush green foliage" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/133230c1-f6a0-4dc1-a2a8-4116f649f49e.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        River Rock Trail
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Follow the river trail and enjoy the soothing sounds of flowing water as you explore lush green surroundings.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.6s;" data-difficulty="easy">
+      <img alt="Colorful wildflowers blooming along a forest trail in springtime with bright green trees" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b3bd074a-e848-4f34-1d52-200e8a7edd95.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        Spring Wildflower Walk
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Discover vibrant wildflowers blooming along the trails in spring, a perfect time for nature lovers and photographers.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.7s;" data-difficulty="moderate">
+      <img alt="Autumn trail covered with fallen leaves and trees with orange and red foliage" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d6376d3a-3c74-4819-ba28-ce77289a6af3.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        Autumn Leaf Trail
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Enjoy the crisp air and colorful leaves on this scenic autumn trail, perfect for a peaceful walk or photography.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+     <article class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition duration-500 hover:scale-105 reveal" style="animation-delay: 0.8s;" data-difficulty="hard">
+      <img alt="Snow-covered forest trail lined with tall evergreen trees under a clear blue sky" class="w-full h-56 object-cover" height="224" loading="lazy" src="https://storage.googleapis.com/a1aa/image/203c4c0d-32d2-42df-f395-630499261840.jpg" width="600"/>
+      <div class="p-6 flex flex-col flex-grow">
+       <h3 class="text-2xl font-semibold text-green-900 mb-3">
+        Winter Evergreen Trail
+       </h3>
+       <p class="text-green-700 flex-grow mb-5 leading-relaxed">
+        Explore the serene beauty of snow-covered evergreen forests in winter, a magical experience for all ages.
+       </p>
+       <button class="mt-auto self-start bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+        Learn More
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Gallery Section -->
+   <section class="mb-20" id="gallery">
+    <h2 class="text-4xl font-bold text-green-900 mb-10 text-center fadeInUp" style="animation-delay: 0.2s;">
+     Gallery
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+     <img alt="Close-up of dew drops on green pine needles in early morning light" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dc225931-4b3e-47ac-3df4-4a955f7d2a8f.jpg" style="animation-delay: 0.25s" width="400"/>
+     <img alt="Wide-angle shot of a forest trail winding through tall trees with golden autumn leaves" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/268c9419-ec5f-4865-39a8-f68cb8d97d6e.jpg" style="animation-delay: 0.3s" width="400"/>
+     <img alt="Hiker standing on a rocky outcrop overlooking a vast green forest valley under blue sky" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a0fdf688-3c7c-428c-64e8-0978652961eb.jpg" style="animation-delay: 0.35s" width="400"/>
+     <img alt="Sunlight streaming through dense forest canopy creating light beams and shadows" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3461ca90-720d-41ee-0985-7af89921cfbe.jpg" style="animation-delay: 0.4s" width="400"/>
+     <img alt="Close-up of colorful wildflowers blooming beside a forest trail in spring" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/489c9eaa-8f6a-4a80-52d8-38f8aa05eb82.jpg" style="animation-delay: 0.45s" width="400"/>
+     <img alt="Snow-covered evergreen trees lining a quiet forest path in winter" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ad06f3bf-37eb-4492-1f80-e742de8493bf.jpg" style="animation-delay: 0.5s" width="400"/>
+     <img alt="Group of hikers walking along a forest trail with backpacks and trekking poles" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/131e1933-461d-413b-b6f9-614c3c63ed62.jpg" style="animation-delay: 0.55s" width="400"/>
+     <img alt="Close-up of a wooden trail signpost with directions in a forest setting" class="rounded-xl shadow-lg object-cover w-full h-48 cursor-pointer transform transition duration-300 hover:scale-105 reveal" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/550dbd91-d698-45c1-1805-6a6fb46b186b.jpg" style="animation-delay: 0.6s" width="400"/>
+    </div>
+   </section>
+   <!-- About Section -->
+   <section class="mb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="about">
+    <h2 class="text-4xl font-bold text-green-900 mb-10 text-center fadeInUp" style="animation-delay: 0.2s;">
+     About Forest Trails
+    </h2>
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+     <img alt="Smiling guide leading a group of hikers through a forest trail with backpacks and walking sticks" class="rounded-3xl shadow-lg w-full md:w-1/2 object-cover reveal" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e482ab02-2f6b-478d-1ced-f9f8ae8ccd49.jpg" style="animation-delay: 0.3s" width="600"/>
+     <div class="text-green-800 space-y-6 reveal" style="animation-delay: 0.4s">
+      <p class="text-lg leading-relaxed">
+       Forest Trails was founded with a passion for nature and adventure. Our mission is to connect people with the great outdoors through safe, guided hiking tours that showcase the beauty and diversity of forest landscapes.
+      </p>
+      <p class="text-lg leading-relaxed">
+       Our experienced guides are knowledgeable about local flora, fauna, and history, ensuring an enriching experience for hikers of all skill levels. Whether you seek a peaceful walk or a challenging trek, we have a trail for you.
+      </p>
+      <p class="text-lg leading-relaxed">
+       Join us to explore hidden gems, breathe fresh forest air, and create lasting memories surrounded by nature’s wonders.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section class="mb-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" id="contact">
+    <h2 class="text-4xl font-bold text-green-900 mb-10 text-center fadeInUp" style="animation-delay: 0.2s;">
+     Get in Touch
+    </h2>
+    <form action="#" class="bg-white rounded-3xl shadow-lg p-8 space-y-6 reveal" method="POST" novalidate="" style="animation-delay: 0.3s;" aria-label="Newsletter signup form">
+     <div>
+      <label class="block text-green-900 font-semibold mb-2" for="name">
+       Name
+      </label>
+      <input class="w-full border border-green-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" id="name" name="name" placeholder="Your full name" required="" type="text" aria-required="true"/>
+     </div>
+     <div>
+      <label class="block text-green-900 font-semibold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full border border-green-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" id="email" name="email" placeholder="you@example.com" required="" type="email" aria-required="true"/>
+     </div>
+     <div>
+      <label class="block text-green-900 font-semibold mb-2" for="message">
+       Message
+      </label>
+      <textarea class="w-full border border-green-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-y min-h-[120px]" id="message" name="message" placeholder="Write your message here..." required="" aria-required="true"></textarea>
+     </div>
+     <button class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-full shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" type="submit">
+      Send Message
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-green-800 via-green-900 to-green-800 text-green-200 py-8 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+    <p class="text-sm select-none">
+     © 2024 Forest Trails. All rights reserved.
+    </p>
+    <div class="flex space-x-8 text-2xl">
+     <a aria-label="Facebook" class="hover:text-white transition duration-300 ease-in-out" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition duration-300 ease-in-out" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white transition duration-300 ease-in-out" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-white transition duration-300 ease-in-out" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-youtube">
+      </i>
+     </a>
+    </div>
+    <a href="index.html" class="text-green-200 hover:text-white transition duration-300 ease-in-out">
+     Back to Home
+    </a>
+   </div>
+  </footer>
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed bottom-4 right-4 bg-green-700 hover:bg-green-800 text-white font-semibold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+   Back to Top
+  </button>
+  <script>
+   // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll reveal animation
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      reveals.forEach((el) => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Filter trails by difficulty
+    const difficultyFilter = document.getElementById('difficulty-filter');
+    const trailCards = document.querySelectorAll('#tours article');
+
+    difficultyFilter.addEventListener('change', () => {
+      const selectedDifficulty = difficultyFilter.value;
+      trailCards.forEach((card) => {
+        const difficulty = card.getAttribute('data-difficulty');
+        if (!selectedDifficulty || difficulty === selectedDifficulty) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Contact form confirmation
+    const contactForm = document.querySelector('#contact form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for reaching out! We will get back to you soon.');
+      contactForm.reset();
+    });
+  </script>
+ </body>
+</html>
